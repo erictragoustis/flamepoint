@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-dark fpoint_navbar fpoint-navbar-light site-navbar-target"
+    id="fpoint-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">E.Tragoustis</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+            data-target="#fpoint-nav" aria-controls="fpoint-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="fpoint-nav">
+            <ul class="navbar-nav nav ml-auto">
+                <li class="nav-item"><a href="#home-section" class="nav-link active"><span>Home</span></a></li>
+                <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+                <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume/CV</span></a></li>
+                <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+                <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Portfolio</span></a></li>
+                <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
+                <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact/Hire</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main role="main" class="container">
+    <section class="fpoint-section">
+        <div class="row d-flex">
+            <div class="col-md-6 col-lg-5 ">
+                <img src="{% static 'css/img/eric.jpg' %}" alt="eric" class="rounded-circle img-fluid mx-auto d-block" />
+            </div>
+
+            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+                <div class="row justify-content-start pb-3">
+                    <div class="col-md-12 heading-section ftco-animate fadeInUp ftco-animated">
+                        <h1 class="big">Eric Tragoustis</h1>
+                        <h2 class="mb-4">Web Developer / Digital Marketer</h2>
+                        <p>Όλα άρχισαν στην ηλικία των 11 όταν ήρθα σε επαφή με τον πρώτο Η/Υ που ήρθε στο σπίτι έναν AMSTRAD CPC6128 (υπάρχει και λειτουργεί ακόμα!) και άρχισα να αντιγράφω Mini games σε BASIC που είχε στο manual του. Η συνέχεια ήταν αναπόφευκτη, την εποχή του Γυμνασίου-Λυκείου, άρχισα να μαθαίνω από βιβλία PASCAL, FORTRAN και C, C++. Στη συνέχεια είδα την επαγγελματική ευκαιρία και μπήκα στον κόσμο του Web Development μαθαίνοντας PHP και HTML/CSS ώστε να μπορώ να καλύψω αυτή την ανάγκη. 
+
+                            Στη συνέχεια συνεργάστηκα με επιχειρήσεις που με εμπιστεύτηκαν για της ανάγκες τους τόσο στην κατασκευη των websites τους όσο και στην προώθηση τους στον κόσμο των social media. 
+                            
+                            Το 2011 μπήκα στον κόσμο του Digital Marketing αρχίζοντας από online webinars αλλά και σεμινάρια, απέκτησα εμπειρία στο social media marketing  όταν ασχολήθηκα με το Blogging στην Ελλάδα την εποχή της μεγάλης του άνθισης στην χώρα.
+                            
+                             
+                            
+                            Αφού ασχολήθηκα εκτεταμένα με το affiliate αλλά και το CPA Marketing απεκτησα έμπρακτη εμπειρία στο SEO τόσο στο on-site οσο και το off-site φτανοντας websites στις πρώτες σελίδες των μηχανων αναζήτησης σε ανταγωνιστικά keywords. </p>
+                        
+                    </div>
+                </div>
+                <div class="counter-wrap ftco-animate d-flex mt-md-3 fadeInUp ftco-animated">
+                    <div class="text">
+                        <p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="row ">
+            <div class="col-md-6">
+                <h3>Title</h3>
+                <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.</p>            </div>
+            <div class="col-md-6">               
+                <h3>Title</h3>
+                <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.</p>            </div>
+            
+            </div>
+        </div>
+    </section>
+
+</main><!-- /.container -->
+{% endblock body %}

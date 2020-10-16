@@ -1,0 +1,247 @@
+
+  body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #000000;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #999999; }
+    body.menu-show {
+      overflow: hidden;
+      position: fixed;
+      height: 100%;
+      width: 100%; }
+  
+  a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    color: #39b6ff; }
+    a:hover, a:focus {
+      text-decoration: none;
+      color:#39b6ff;
+      outline: none !important; }
+  
+  h1, h2, h3, h4, h5,
+  .h1, .h2, .h3, .h4, .h5 {
+    line-height: 1.5;
+    color: white;
+    font-weight: 400; }
+  
+  .text-primary {
+    color: #39b6ff!important; }
+  
+  .fpoint-navbar-light {
+    background: transparent !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3; }
+    @media (max-width: 991.98px) {
+      .fpoint-navbar-light {
+        background: #000000 !important;
+        position: relative;
+        top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 15px;
+        padding-right: 15px; } }
+    .fpoint-navbar-light .container {
+      width: 1110px;
+      margin: 0 auto;
+      padding: 0; }
+    .fpoint-navbar-light .navbar-brand {
+      color: #fff;
+      padding-top: .7rem;
+      padding-bottom: .7rem; }
+      .fpoint-navbar-light .navbar-brand:hover, .fpoint-navbar-light .navbar-brand:focus {
+        color: #fff !important; }
+      @media (max-width: 991.98px) {
+        .fpoint-navbar-light .navbar-brand {
+          color: #fff; } }
+    @media (max-width: 991.98px) {
+      .fpoint-navbar-light .navbar-nav {
+        padding-bottom: 20px;
+        margin-right: 0; } }
+    .fpoint-navbar-light .navbar-nav > .nav-item > .nav-link {
+      font-size: 16px;
+      padding-top: .7rem;
+      padding-bottom: .7rem;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: #fff;
+      font-weight: 400;
+      opacity: 1 !important; }
+      .fpoint-navbar-light .navbar-nav > .nav-item > .nav-link span {
+        position: relative;
+        display: block;
+        padding-bottom: 2px; }
+        @media (max-width: 1199.98px) {
+          .fpoint-navbar-light .navbar-nav > .nav-item > .nav-link span {
+            display: inline-block; } }
+        .fpoint-navbar-light .navbar-nav > .nav-item > .nav-link span:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background: #39b6ff;
+          visibility: visible;
+          -webkit-transform: scaleX(0);
+          -moz-transform: scaleX(0);
+          -ms-transform: scaleX(0);
+          -o-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          -moz-transition: all 0.3s ease-in-out 0s;
+          -ms-transition: all 0.3s ease-in-out 0s;
+          -o-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s; }
+      .fpoint-navbar-light .navbar-nav > .nav-item > .nav-link:hover span:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        -moz-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        -o-transform: scaleX(1);
+        transform: scaleX(1); }
+      @media (max-width: 991.98px) {
+        .fpoint-navbar-light .navbar-nav > .nav-item > .nav-link {
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 1rem;
+          padding-top: 0;
+          color: #fff; } }
+    .fpoint-navbar-light .navbar-nav > .nav-item.cta > a {
+      color: #fff;
+      border: 1px solid #39b6ff;
+      padding-top: .7rem;
+      padding-bottom: .7rem;
+      padding-left: 18px;
+      padding-right: 18px;
+      background: #39b6ff;
+      margin-top: 0;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px; }
+      .fpoint-navbar-light .navbar-nav > .nav-item.cta > a span {
+        display: inline-block;
+        color: #fff; }
+      .fpoint-navbar-light .navbar-nav > .nav-item.cta > a:hover {
+        background: #39b6ff;
+        border: 1px solid #39b6ff; }
+    .fpoint-navbar-light .navbar-nav > .nav-item.cta.cta-colored a {
+      border: 1px solid #a0f669;
+      background: #a0f669 !important; }
+    .fpoint-navbar-light .navbar-nav > .nav-item .nav-link.active {
+      background: transparent;
+      background: none;
+      color: #39b6ff; }
+      /* #39b6ff*/
+      .fpoint-navbar-light .navbar-nav > .nav-item .nav-link.active span:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        transform: scaleX(1); }
+    @media (max-width: 991.98px) {
+      .fpoint-navbar-light .navbar-nav > .nav-item.active > a {
+        color: #39b6ff; } }
+    .fpoint-navbar-light .navbar-toggler {
+      border: none;
+      color: rgba(255, 255, 255, 0.5) !important;
+      cursor: pointer;
+      padding-right: 0;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: .1em; }
+      .fpoint-navbar-light .navbar-toggler:hover, .fpoint-navbar-light .navbar-toggler:focus {
+        text-decoration: none;
+        color: #39b6ff;
+        outline: none !important; }
+    .fpoint-navbar-light.scrolled {
+      position: fixed;
+      right: 0;
+      left: 0;
+      top: 0;
+      margin-top: -130px;
+      background: #000000 !important;
+      -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      padding: 0 15px; }
+      .fpoint-navbar-light.scrolled .nav-item > .nav-link {
+        color: #fff !important; }
+        @media (max-width: 991.98px) {
+          .fpoint-navbar-light.scrolled .nav-item > .nav-link {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-bottom: 20px !important; } }
+      .fpoint-navbar-light.scrolled .nav-item.active > a {
+        color: #39b6ff !important; }
+      .fpoint-navbar-light.scrolled .nav-item.cta > a {
+        color: #fff !important;
+        background: #39b6ff;
+        border: none !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: .5rem !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        margin-top: 5px !important;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px; }
+        .fpoint-navbar-light.scrolled .nav-item.cta > a span {
+          display: inline-block;
+          color: #fff !important; }
+      .fpoint-navbar-light.scrolled .nav-item.cta.cta-colored span {
+        border-color: #39b6ff; }
+      @media (max-width: 991.98px) {
+        .fpoint-navbar-light.scrolled .navbar-nav {
+          background: none;
+          border-radius: 0px;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: 0 !important; } }
+      .fpoint-navbar-light.scrolled .navbar-toggler {
+        border: none;
+        color: rgba(0, 0, 0, 0.5) !important;
+        border-color: rgba(0, 0, 0, 0.5) !important;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: .1em; }
+      .fpoint-navbar-light.scrolled .nav-link {
+        color: #000000 !important; }
+        .fpoint-navbar-light.scrolled .nav-link.active {
+          color: #39b6ff!important; }
+      .fpoint-navbar-light.scrolled.awake {
+        margin-top: 0px;
+        -webkit-transition: .3s all ease-out;
+        -o-transition: .3s all ease-out;
+        transition: .3s all ease-out; }
+      .fpoint-navbar-light.scrolled.sleep {
+        -webkit-transition: .3s all ease-out;
+        -o-transition: .3s all ease-out;
+        transition: .3s all ease-out; }
+      .fpoint-navbar-light.scrolled .navbar-brand {
+        color: #fff;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 24px; }
+  
+  .navbar-brand {
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase; }
+  
+
+  
+  .fpoint-section {
+    padding: 6em 0;
+    position: relative; }
+    @media (max-width: 767.98px) {
+      .fpoint-section {
+        padding: 5em 0; } }
+  
