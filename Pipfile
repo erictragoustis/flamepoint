@@ -1,0 +1,30 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+
+[packages]
+django = "*"
+django-widget-tweaks = "*"
+pillow = "*"
+django-autoslug = "*"
+django-extensions = "*"
+django-model-utils = "*"
+django-crispy-forms = "*"
+django-allauth = "*"
+unidecode = "*"
+django-imagekit = "*"
+django-ckeditor = "*"
+django-countries = "*"
+pylint-django = "*"
+django-redis = "*"
+django-select2 = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
+django-environ = "*"
+
+[requires]
+python_version = "3.8"
