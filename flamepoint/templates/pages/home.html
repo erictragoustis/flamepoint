@@ -2,212 +2,649 @@
 {% load static %}
 {% block body %}
 <nav class="navbar navbar-expand-lg navbar-dark fpoint_navbar fpoint-navbar-light site-navbar-target"
-    id="fpoint-navbar">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">E.Tragoustis</a>
-        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
-            data-target="#fpoint-nav" aria-controls="fpoint-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-        </button>
-        <div class="collapse navbar-collapse" id="fpoint-nav">
-            <ul class="navbar-nav nav ml-auto">
-                <li class="nav-item"><a href="#home-section" class="nav-link active"><span>Home</span></a></li>
-                <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-                <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume/CV</span></a></li>
-                <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-                <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Portfolio</span></a></li>
-                <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
-                <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact/Hire</span></a></li>
-            </ul>
-        </div>
+  id="fpoint-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">E.Tragoustis</a>
+    <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+      data-target="#fpoint-nav" aria-controls="fpoint-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+    <div class="collapse navbar-collapse" id="fpoint-nav">
+      <ul class="navbar-nav nav ml-auto">
+        <li class="nav-item"><a href="#home-section" class="nav-link active"><span>Home</span></a></li>
+        <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+        <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume/CV</span></a></li>
+        <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+        <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Portfolio</span></a></li>
+        <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
+        <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact/Hire</span></a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
 <main role="main" class="container">
-    <section class="fpoint-section">
-        <div class="row d-flex">
-            <div class="col-md-6 col-lg-5 ">
-                <img src="{% static 'css/img/eric.jpg' %}" alt="eric" class="rounded-circle img-fluid mx-auto d-block" />
+  <section class="fpoint-section">
+    <div class="row d-flex">
+      <div class="col-md-6 col-lg-5 ">
+        <img src="{% static 'css/img/eric.jpg' %}" alt="eric"
+          class="rounded-circle img-thumbnail img-fluid mx-auto d-block" />
+      </div>
+
+      <div class="col-md-6 col-lg-7 pl-lg-5 ">
+        <div class="row  ">
+          <div class="col-md-12 heading-section ">
+            <h1 class="big"><span class="bigfirst">Eric</span> Tragoustis</h1>
+            <h2 class="expertise">Web Developer / Digital Marketer</h2>
+            <div class="row">
+              <div class="col-md-2 mb-4">
+                <hr class="solid">
+              </div>
             </div>
 
-            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-                <div class="row justify-content-start pb-3">
-                    <div class="col-md-12 heading-section ftco-animate fadeInUp ftco-animated">
-                        <h1 class="big">Eric Tragoustis</h1>
-                        <h2 class="mb-4">Web Developer / Digital Marketer</h2>
-                        <p>Όλα άρχισαν στην ηλικία των 11 όταν ήρθα σε επαφή με τον πρώτο Η/Υ που ήρθε στο σπίτι έναν AMSTRAD CPC6128 (υπάρχει και λειτουργεί ακόμα!) και άρχισα να αντιγράφω Mini games σε BASIC που είχε στο manual του. Η συνέχεια ήταν αναπόφευκτη, την εποχή του Γυμνασίου-Λυκείου, άρχισα να μαθαίνω από βιβλία PASCAL, FORTRAN και C, C++. Στη συνέχεια είδα την επαγγελματική ευκαιρία και μπήκα στον κόσμο του Web Development μαθαίνοντας PHP και HTML/CSS ώστε να μπορώ να καλύψω αυτή την ανάγκη. 
 
-                            Στη συνέχεια συνεργάστηκα με επιχειρήσεις που με εμπιστεύτηκαν για της ανάγκες τους τόσο στην κατασκευη των websites τους όσο και στην προώθηση τους στον κόσμο των social media. 
-                            
-                            Το 2011 μπήκα στον κόσμο του Digital Marketing αρχίζοντας από online webinars αλλά και σεμινάρια, απέκτησα εμπειρία στο social media marketing  όταν ασχολήθηκα με το Blogging στην Ελλάδα την εποχή της μεγάλης του άνθισης στην χώρα.
-                            
-                             
-                            
-                            Αφού ασχολήθηκα εκτεταμένα με το affiliate αλλά και το CPA Marketing απεκτησα έμπρακτη εμπειρία στο SEO τόσο στο on-site οσο και το off-site φτανοντας websites στις πρώτες σελίδες των μηχανων αναζήτησης σε ανταγωνιστικά keywords. </p>
-                        
-                    </div>
-                </div>
-                <div class="counter-wrap ftco-animate d-flex mt-md-3 fadeInUp ftco-animated">
-                    <div class="text">
-                        <p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
-                    </div>
-                </div>
+            <div class="row mt-2">
+              <div class="col-md-12">
+                <p>Όλα άρχισαν στην ηλικία των 11 όταν ήρθα σε επαφή με τον πρώτο Η/Υ που ήρθε στο σπίτι έναν
+                  <strong>AMSTRAD
+                    CPC6128</strong> (υπάρχει και λειτουργεί ακόμα!) και άρχισα να αντιγράφω Mini games σε BASIC που
+                  είχε στο
+                  manual
+                  του. Η συνέχεια ήταν αναπόφευκτη, την εποχή του Γυμνασίου-Λυκείου, άρχισα να μαθαίνω από βιβλία
+                  PASCAL,
+                  FORTRAN και C, C++. Στη συνέχεια είδα την επαγγελματική ευκαιρία και μπήκα στον κόσμο του Web
+                  Development
+                  μαθαίνοντας <strong>PHP και HTML/CSS </strong>ώστε να μπορώ να καλύψω αυτή την ανάγκη.</p>
+              </div>
             </div>
-        </div>
-    </section>
-    <section class="">
-        <div class="row ">
-            <div class="col-md-6">
-                <h3>Title</h3>
-                <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.</p>            </div>
-            <div class="col-md-6">               
-                <h3>Title</h3>
-                <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.</p>            </div>
-            
-            </div>
-        </div>
-    </section>
-    <section>
-        <div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
-            <button class="button" data-filter=".metal">metal</button>
-            <button class="button" data-filter=".transition">transition</button>
-            <button class="button" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</button>
-            <button class="button" data-filter=":not(.transition)">not transition</button>
-            <button class="button" data-filter=".metal:not(.transition)">metal but not transition</button>
-            <button class="button" data-filter="numberGreaterThan50">number > 50</button>
-            <button class="button" data-filter="ium">name ends with &ndash;ium</button>
           </div>
-          
-          <h2>Sort</h2>
-          <div id="sorts" class="button-group">  <button class="button is-checked" data-sort-by="original-order">original order</button>
-            <button class="button" data-sort-by="name">name</button>
-            <button class="button" data-sort-by="symbol">symbol</button>
-            <button class="button" data-sort-by="number">number</button>
-            <button class="button" data-sort-by="weight">weight</button>
-            <button class="button" data-sort-by="category">category</button>
+        </div>
+
+        <div class="row mt-md-3">
+          <div class="col-md-6 ">
+
           </div>
-          
-          <div class="grid">
-            <div class="element-item transition metal " data-category="transition">
-              <h3 class="name">Mercury</h3>
-              <p class="symbol">Hg</p>
-              <p class="number">80</p>
-              <p class="weight">200.59</p>
+          <div class="col-md-6 ">
+            <a href="#" class="btn btn-block btn-primary py-3 px-3 mt-4">Download CV</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="">
+    <div class="row mt-4">
+      <div class="col-md-12 ">
+        <h2 class="sectiontitle">My Skills</h2>
+        <span class="solid mb-4"></span>
+      </div>
+      <div class="col-md-4 mt-4">
+        <h3 class="skillgrouptitle">DESIGN</h3>
+        <hr class="solidblue mb-4">
+        <p class="skills-heading">Photoshop</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">Illustrator</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mt-4">
+        <h3 class="skillgrouptitle">PROGRAMMING</h3>
+        <hr class="solidblue mb-4">
+        <p class="skills-heading">PHP</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">Python</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">C++</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">DB (MySQL/PostgreSQL)</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4">
+        <h3 class="skillgrouptitle">DIGITAL MARKETING</h3>
+        <hr class="solidblue mb-4">
+        <p class="skills-heading">Google Ads</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">Python</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">SEO</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">C++</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">DB (MySQL/PostgreSQL)</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4">
+        <h3 class="skillgrouptitle ">FRONTEND</h3>
+        <hr class="solidblue mb-4">
+        <p class="skills-heading">HTML5/CSS3</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">JS *vanilla</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">JS *jQuery</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4">
+        <h3 class="skillgrouptitle">FRAMEWORKS</h3>
+        <hr class="solidblue mb-4">
+        <p class="skills-heading">Django</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">Laravel</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4">
+        <h3 class="skillgrouptitle">WORDPRESS</h3>
+        <hr class="solidblue mb-4">
+        <p class="skills-heading">Elementor</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">WooCommerce</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <p class="skills-heading">Customizing</p>
+        <div class="progress skills mb-2">
+          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+  <section class="">
+    <div class="row mt-4">
+      <div class="col-md-12 ">
+        <h2 class="sectiontitle">My Story</h2>
+        <span class="solid mb-4"></span>
+      </div>
+      <div class="col-md-6">
+        <h3>Title</h3>
+        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
+          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
+          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
+          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
+          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
+          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
+          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
+        </p>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="webd-tab" data-toggle="tab" href="#webd" role="tab" aria-controls="webd"
+              aria-selected="true">Web Development/Programming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="dm-tab" data-toggle="tab" href="#dm" role="tab" aria-controls="dm"
+              aria-selected="false">Digital Marketing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="design"
+              aria-selected="false">Design</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="webd" role="tabpanel" aria-labelledby="webd">
+            asfasdf
+
+          </div>
+          <div class="tab-pane fade" id="dm" role="tabpanel" aria-labelledby="dm">2</div>
+          <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design">Etsy mixtape 3</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>Title</h3>
+        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
+          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
+          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
+          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
+          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
+          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
+          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
+        </p>
+      </div>
+
+    </div>
+    </div>
+  </section>
+  <section>
+    <div class="row">
+      <div class="col-md-12 mt-4">
+        <h2 class="sectiontitle">Work Experience</h2>
+        <span class="solid mb-4"></span>
+      </div>
+      <div class="col-md-12">
+
+        <div class="main-timeline">
+
+          <!-- start experience section-->
+          <div class="timeline">
+
+            <div class="date-content">
+              <div class="date-outer">
+                <span class="date">
+                  <span class="month">Since</span>
+                  <span class="year">2015</span>
+                </span>
+              </div>
             </div>
-            <div class="element-item metalloid " data-category="metalloid">
-              <h3 class="name">Tellurium</h3>
-              <p class="symbol">Te</p>
-              <p class="number">52</p>
-              <p class="weight">127.6</p>
+            <div class="timeline-content">
+              <h5 class="title">iYouth Travel</h5>
+              <h6 class="title">Digital Marketing Manager / Digital Account Manager</h5>
+                <p class="description">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p>Υπεύθυνος όλης της digital παρουσίας της εταιρίας iYouth Travel. Τουριστικό γραφείο που
+                      ειδικεύετε στον οργανωμένο νεανικό τουρισμό και στα μεμονωμένα ταξιδιωτικά πακέτα</p>
+                  </div>
+                  <div class="col-12">
+                    <ul class="work fa-ul">
+                      <li class=""><span class="fa-li"><i class="fa fa-check" aria-hidden="true"></i></span>Δημιουργία
+                        και αξιολόγηση καμπανιών σε Facebook και Instagram</li>
+                      <li class=""><span class="fa-li"><i class="fa fa-check" aria-hidden="true"></i></span>Καθημερινή
+                        παρουσία στα Social Media</li>
+                      <li class=""><span class="fa-li"><i class="fa fa-check" aria-hidden="true"></i></span>Content
+                        Creation για τα posts στα Social Media (Copywriting / Images /Videos)</li>
+
+                    </ul>
+                  </div>
+
+                </div>
+                </p>
             </div>
-            <div class="element-item post-transition metal " data-category="post-transition">
-              <h3 class="name">Bismuth</h3>
-              <p class="symbol">Bi</p>
-              <p class="number">83</p>
-              <p class="weight">208.980</p>
+          </div>
+          <!-- end experience section-->
+
+          <!-- start experience section-->
+          <div class="timeline">
+
+            <div class="date-content">
+              <div class="date-outer">
+                <span class="date">
+                  <span class="month">Since</span>
+                  <span class="year">2015</span>
+                </span>
+              </div>
             </div>
-            <div class="element-item post-transition metal " data-category="post-transition">
-              <h3 class="name">Lead</h3>
-              <p class="symbol">Pb</p>
-              <p class="number">82</p>
-              <p class="weight">207.2</p>
+            <div class="timeline-content">
+              <h5 class="title">Freelancer</h5>
+              <h6 class="title">Digital Marketing Manager / Digital Account Manager</h5>
+                <p class="description">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p>Υπεύθυνος όλης της digital παρουσίας της εταιρίας iYouth Travel. Τουριστικό γραφείο που
+                      ειδικεύετε στον οργανωμένο νεανικό τουρισμό και στα μεμονωμένα ταξιδιωτικά πακέτα</p>
+                  </div>
+                  <div class="col-6">
+                    <ul class="work">
+                      <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+                      <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="work">
+                      <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+                      <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+
+                    </ul>
+
+                  </div>
+                </div>
+                </p>
             </div>
-            <div class="element-item transition metal " data-category="transition">
-              <h3 class="name">Gold</h3>
-              <p class="symbol">Au</p>
-              <p class="number">79</p>
-              <p class="weight">196.967</p>
+          </div>
+          <!-- end experience section-->
+
+          <!-- start experience section-->
+          <div class="timeline">
+
+            <div class="date-content">
+              <div class="date-outer">
+                <span class="date">
+                  <span class="month">2011</span>
+                  <span class="year">2014</span>
+                </span>
+              </div>
             </div>
-            <div class="element-item alkali metal " data-category="alkali">
-              <h3 class="name">Potassium</h3>
-              <p class="symbol">K</p>
-              <p class="number">19</p>
-              <p class="weight">39.0983</p>
-            </div>
-            <div class="element-item alkali metal " data-category="alkali">
-              <h3 class="name">Sodium</h3>
-              <p class="symbol">Na</p>
-              <p class="number">11</p>
-              <p class="weight">22.99</p>
-            </div>
-            <div class="element-item transition metal " data-category="transition">
-              <h3 class="name">Cadmium</h3>
-              <p class="symbol">Cd</p>
-              <p class="number">48</p>
-              <p class="weight">112.411</p>
-            </div>
-            <div class="element-item alkaline-earth metal " data-category="alkaline-earth">
-              <h3 class="name">Calcium</h3>
-              <p class="symbol">Ca</p>
-              <p class="number">20</p>
-              <p class="weight">40.078</p>
-            </div>
-            <div class="element-item transition metal " data-category="transition">
-              <h3 class="name">Rhenium</h3>
-              <p class="symbol">Re</p>
-              <p class="number">75</p>
-              <p class="weight">186.207</p>
-            </div>
-            <div class="element-item post-transition metal " data-category="post-transition">
-              <h3 class="name">Thallium</h3>
-              <p class="symbol">Tl</p>
-              <p class="number">81</p>
-              <p class="weight">204.383</p>
-            </div>
-            <div class="element-item metalloid " data-category="metalloid">
-              <h3 class="name">Antimony</h3>
-              <p class="symbol">Sb</p>
-              <p class="number">51</p>
-              <p class="weight">121.76</p>
-            </div>
-            <div class="element-item transition metal " data-category="transition">
-              <h3 class="name">Cobalt</h3>
-              <p class="symbol">Co</p>
-              <p class="number">27</p>
-              <p class="weight">58.933</p>
-            </div>
-            <div class="element-item lanthanoid metal inner-transition " data-category="lanthanoid">
-              <h3 class="name">Ytterbium</h3>
-              <p class="symbol">Yb</p>
-              <p class="number">70</p>
-              <p class="weight">173.054</p>
-            </div>
-            <div class="element-item noble-gas nonmetal " data-category="noble-gas">
-              <h3 class="name">Argon</h3>
-              <p class="symbol">Ar</p>
-              <p class="number">18</p>
-              <p class="weight">39.948</p>
-            </div>
-            <div class="element-item diatomic nonmetal " data-category="diatomic">
-              <h3 class="name">Nitrogen</h3>
-              <p class="symbol">N</p>
-              <p class="number">7</p>
-              <p class="weight">14.007</p>
-            </div>
-            <div class="element-item actinoid metal inner-transition " data-category="actinoid">
-              <h3 class="name">Uranium</h3>
-              <p class="symbol">U</p>
-              <p class="number">92</p>
-              <p class="weight">238.029</p>
-            </div>
-            <div class="element-item actinoid metal inner-transition " data-category="actinoid">
-              <h3 class="name">Plutonium</h3>
-              <p class="symbol">Pu</p>
-              <p class="number">94</p>
-              <p class="weight">(244)</p>
-            </div>
-            <div class=" element-item card actinoid metal inner-transition" style="width: 18rem;" data-category="actinoid">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
+            <div class="timeline-content">
+              <h5 class="title">to-mati.net</h5>
+              <p class="description">
+              <div class="row">
+                <div class="col-md-12">
+                  <p>Υπεύθυνος όλης της digital παρουσίας της εταιρίας iYouth Travel. Τουριστικό γραφείο που ειδικεύετε
+                    στον οργανωμένο νεανικό τουρισμό και στα μεμονωμένα ταξιδιωτικά πακέτα</p>
+                </div>
+                <div class="col-6">
+                  <ul class="work">
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="work">
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+
+                  </ul>
+
                 </div>
               </div>
+              </p>
+            </div>
           </div>
-          
-    </section>
+          <!-- end experience section-->
+
+          <!-- start experience section-->
+          <div class="timeline">
+
+            <div class="date-content">
+              <div class="date-outer">
+                <span class="date">
+                  <span class="month">2008</span>
+                  <span class="year">2010</span>
+                </span>
+              </div>
+            </div>
+            <div class="timeline-content">
+              <h5 class="title">Genesis P.R.</h5>
+              <p class="description">
+              <div class="row">
+                <div class="col-md-12">
+                  <p>Υπεύθυνος όλης της digital παρουσίας της εταιρίας iYouth Travel. Τουριστικό γραφείο που ειδικεύετε
+                    στον οργανωμένο νεανικό τουρισμό και στα μεμονωμένα ταξιδιωτικά πακέτα</p>
+                </div>
+                <div class="col-6">
+                  <ul class="work">
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="work">
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+
+                  </ul>
+
+                </div>
+              </div>
+              </p>
+            </div>
+          </div>
+          <!-- end experience section-->
+          <!-- start experience section-->
+          <div class="timeline">
+            <div class="date-content">
+              <div class="date-outer">
+                <span class="date">
+                  <span class="month">2007</span>
+                  <span class="year">2011</span>
+                </span>
+              </div>
+            </div>
+            <div class="timeline-content">
+              <h5 class="title">ideal Holidays</h5>
+              <p class="description">
+              <div class="row">
+                <div class="col-md-12">
+                  <p>Υπεύθυνος όλης της digital παρουσίας της εταιρίας iYouth Travel. Τουριστικό γραφείο που ειδικεύετε
+                    στον οργανωμένο νεανικό τουρισμό και στα μεμονωμένα ταξιδιωτικά πακέτα</p>
+                </div>
+                <div class="col-6">
+                  <ul class="work">
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="work">
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
+
+                  </ul>
+
+                </div>
+              </div>
+              </p>
+            </div>
+          </div>
+          <!-- end experience section-->
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row">
+      <div class="col-md-12 ">
+        <h2 class="sectiontitle">Blog</h2>
+        <span class="solid mb-4"></span>
+      </div>
+      <div class="col-md-12 ">
+
+
+
+
+
+
+      </div>
+    </div>
+
+
+  </section>
+  <section class="">
+    <div class="row mt-4">
+      <div class="col-md-12 ">
+        <h2 class="sectiontitle">Portfolio</h2>
+        <span class="solid mb-4"></span>
+      </div>
+
+
+      <div class="col-md-12">
+     
+      </div>
+
+
+    </div>
+  </section>
+  <section class="portfolio sectiona">
+   
+      <div class="top-side">
+        <h4 class="title">MY WORKS</h4>
+        <h2>PORTFOLIO</h2>
+      </div>
+
+      <div class="filters">
+        <ul>
+          <li class="active" data-filter="*">All</li>
+          <li data-filter=".corporate">Corporate</li>
+          <li data-filter=".personal">Personal</li>
+          <li data-filter=".agency">Agency</li>
+          <li data-filter=".portal">Portal</li>
+        </ul>
+      </div>
+
+      <div class="filters-content">
+        <div class="row grid">
+          <div class="col-sm-4 all corporate">
+            <div class="box item">
+              <img src="https://bestjquery.com/tutorial/hover-effect/demo262/images/img-2.jpg">
+              <div class="box-content">
+                <div class="inner-content">
+                  <h3 class="title">taxidevoumemazi.gr</h3>
+                  <span class="post">Website</span>
+                  <ul class="icon">
+                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 all personal">
+            <div class="box item">
+              <img src="https://bestjquery.com/tutorial/hover-effect/demo262/images/img-2.jpg">
+              <div class="box-content">
+                <div class="inner-content">
+                  <h3 class="title">taxidevoumemazi.gr</h3>
+                  <span class="post">Website</span>
+                  <ul class="icon">
+                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 all agency">
+            <div class="box item">
+              <img src="https://bestjquery.com/tutorial/hover-effect/demo262/images/img-2.jpg">
+              <div class="box-content">
+                <div class="inner-content">
+                  <h3 class="title">taxidevoumemazi.gr</h3>
+                  <span class="post">Website</span>
+                  <ul class="icon">
+                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 all portal">
+            <div class="box item">
+              <img src="https://bestjquery.com/tutorial/hover-effect/demo262/images/img-2.jpg">
+              <div class="box-content">
+                <div class="inner-content">
+                  <h3 class="title">taxidevoumemazi.gr</h3>
+                  <span class="post">Website</span>
+                  <ul class="icon">
+                    <li><a href="#"><i class="fa fa-search"></i></a></li>
+                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+   
+  </section>
+  <section class="">
+    <div class="row mt-4">
+      <div class="col-md-12 ">
+        <h2 class="sectiontitle">Contact me</h2>
+        <span class="solid mb-4"></span>
+      </div>
+      <div class="col-md-6">
+        <h3>Title</h3>
+        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
+          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
+          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
+          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
+          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
+          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
+          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
+        </p>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="webd-tab" data-toggle="tab" href="#webd" role="tab" aria-controls="webd"
+              aria-selected="true">Web Development/Programming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="dm-tab" data-toggle="tab" href="#dm" role="tab" aria-controls="dm"
+              aria-selected="false">Digital Marketing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="design"
+              aria-selected="false">Design</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="webd" role="tabpanel" aria-labelledby="webd">
+            asfasdf
+
+          </div>
+          <div class="tab-pane fade" id="dm" role="tabpanel" aria-labelledby="dm">2</div>
+          <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design">Etsy mixtape 3</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>Title</h3>
+        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
+          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
+          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
+          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
+          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
+          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
+          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
+        </p>
+      </div>
+
+    </div>
+    </div>
+  </section>
 
 </main><!-- /.container -->
 {% endblock body %}
