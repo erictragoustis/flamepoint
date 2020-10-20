@@ -1,10 +1,10 @@
 body {
   font-family: 'Ubuntu', sans-serif;
-  background: #000000;
+  background: #1E1E1E;
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  color: #999999;
+  color: #D4D4D4;
 }
 
 body.menu-show {
@@ -32,8 +32,30 @@ a:hover, a:focus {
   font-size: 70px;
   line-height: 0.9;
 }
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #39b6ff;
+  border-color: #39b6ff;
+}
+
+.btn-primary:hover {
+  
+  background-color: #569CD6;
+ 
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #39b6ff;
+}
+
+.skillbar{
+  background-color: #39b6ff;
+}
+
 .bigfirst{
-  color: #39b6ff;
+  color: #569CD6;
 }
 .expertise {
   font-size: 20px;
@@ -64,11 +86,33 @@ hr.solidblue {
 }
 h2.sectiontitle{
   font-weight:bold;
-
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase; 
 }
+
+.top-title{
+  text-align: center;
+  padding: 30px 0;
+}
+
+.section-skills{
+  padding-bottom: 30px;
+  background-color: #111111;
+}
+
+h2.sectiontitle:after {
+  content: "";
+  display: block;
+  width: 50%;
+  border-bottom: 2px solid #39b6ff;
+  margin: 8px auto;
+}
+
 
 h3.skillgrouptitle{
   margin-bottom: 0;
+  text-transform: uppercase;
 
 }
 ul.work {
@@ -90,7 +134,15 @@ ul.work li{font-size:13px;}
   height:8px;
 }
 
+.blog-entry .text .heading {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
 
+.meta{
+  font-size: 12px;
+}
 
 hr.hr-text {
   position: relative;
@@ -548,7 +600,7 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 }
 
 .box {
-  background: linear-gradient(180deg, #e52d27 0%, #b31217 100%);
+  background: linear-gradient(180deg, #39b6ff 0%, #3978ff 100%);
   font-family: 'Nanum Gothic', sans-serif;
   border-radius: 25px 0;
   position: relative;
@@ -945,7 +997,7 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 }
 .sectiona.portfolio .filters {
   text-align: center;
-  margin-top: 50px;
+
 }
 .sectiona.portfolio .filters ul {
   padding: 0;
@@ -963,7 +1015,7 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   width: calc(0% - 60px);
   position: absolute;
   height: 2px;
-  background: #333;
+  background: #569CD6;
   transition: width 350ms ease-out;
 }
 .sectiona.portfolio .filters ul li:hover:after {

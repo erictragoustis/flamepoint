@@ -66,6 +66,12 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
+flamepoint/media/blog/*
+flamepoint/media/CACHE/*
+flamepoint/media/uploads/*
+flamepoint/media/products/*
+flamepoint/media/*
+
 # Flask stuff:
 instance/
 .webassets-cache

@@ -30,11 +30,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'y*!nb5tl4ilyt@()uykn3b=jyel0fey^e7(=r3o%c$14+-i3a4'
+# Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -49,8 +49,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Imported
+    'ckeditor',
+    'ckeditor_uploader',
+    #Apps
     'users',
     'pages',
+    'resume',
+    'portfolio',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -123,14 +130,33 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Athens'
 
 USE_I18N = True
 
 USE_L10N = True
 
 USE_TZ = True
+DATE_INPUT_FORMATS = ('%d-%m-%Y','%Y-%m-%d')
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
+####################################
+    ##  CKEDITOR CONFIGURATION ##
+####################################
+
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+
+#CK Editor
+CKEDITOR_CONFIGS = {
+    'default': {
+        'entities' : False,
+        'entities_greek' : False,
+        'width' : '100%',
+    },
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

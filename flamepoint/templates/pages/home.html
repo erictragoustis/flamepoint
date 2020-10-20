@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block body %}
 <nav class="navbar navbar-expand-lg navbar-dark fpoint_navbar fpoint-navbar-light site-navbar-target"
   id="fpoint-navbar">
@@ -23,8 +24,9 @@
   </div>
 </nav>
 
-<main role="main" class="container">
-  <section class="fpoint-section">
+
+<section class="fpoint-section">
+  <div class="container">
     <div class="row d-flex">
       <div class="col-md-6 col-lg-5 ">
         <img src="{% static 'css/img/eric.jpg' %}" alt="eric"
@@ -71,177 +73,96 @@
 
       </div>
     </div>
-  </section>
-  <section class="">
+  </div>
+</section>
+<section class="section-skills">
+  <div class="container">
     <div class="row mt-4">
-      <div class="col-md-12 ">
-        <h2 class="sectiontitle">My Skills</h2>
-        <span class="solid mb-4"></span>
-      </div>
-      <div class="col-md-4 mt-4">
-        <h3 class="skillgrouptitle">DESIGN</h3>
-        <hr class="solidblue mb-4">
-        <p class="skills-heading">Photoshop</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-            aria-valuemax="100"></div>
+      <div class="col-md-12 mb-2">
+        <div class="top-title">
+          <h2 class="sectiontitle">My Skills</h2>
         </div>
-        <p class="skills-heading">Illustrator</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-      </div>
+        <div class="col-md-12 mb-2">
 
-      <div class="col-md-4 mt-4">
-        <h3 class="skillgrouptitle">PROGRAMMING</h3>
-        <hr class="solidblue mb-4">
-        <p class="skills-heading">PHP</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">Python</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">C++</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">DB (MySQL/PostgreSQL)</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-      </div>
-      <div class="col-md-4 mt-4">
-        <h3 class="skillgrouptitle">DIGITAL MARKETING</h3>
-        <hr class="solidblue mb-4">
-        <p class="skills-heading">Google Ads</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">Python</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">SEO</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">C++</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">DB (MySQL/PostgreSQL)</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-      </div>
-      <div class="col-md-4 mt-4">
-        <h3 class="skillgrouptitle ">FRONTEND</h3>
-        <hr class="solidblue mb-4">
-        <p class="skills-heading">HTML5/CSS3</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">JS *vanilla</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">JS *jQuery</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-      </div>
-      <div class="col-md-4 mt-4">
-        <h3 class="skillgrouptitle">FRAMEWORKS</h3>
-        <hr class="solidblue mb-4">
-        <p class="skills-heading">Django</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">Laravel</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-      </div>
-      <div class="col-md-4 mt-4">
-        <h3 class="skillgrouptitle">WORDPRESS</h3>
-        <hr class="solidblue mb-4">
-        <p class="skills-heading">Elementor</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">WooCommerce</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-        <p class="skills-heading">Customizing</p>
-        <div class="progress skills mb-2">
-          <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-            aria-valuemax="100"></div>
-        </div>
-      </div>
 
-    </div>
 
-    </div>
-  </section>
-  <section class="">
-    <div class="row mt-4">
-      <div class="col-md-12 ">
-        <h2 class="sectiontitle">My Story</h2>
-        <span class="solid mb-4"></span>
-      </div>
-      <div class="col-md-6">
-        <h3>Title</h3>
-        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
-          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
-          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
-          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
-          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
-          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
-          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
-        </p>
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="webd-tab" data-toggle="tab" href="#webd" role="tab" aria-controls="webd"
-              aria-selected="true">Web Development/Programming</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="dm-tab" data-toggle="tab" href="#dm" role="tab" aria-controls="dm"
-              aria-selected="false">Digital Marketing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="design"
-              aria-selected="false">Design</a>
-          </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="webd" role="tabpanel" aria-labelledby="webd">
-            asfasdf
+          <nav class="nav nav-pills justify-content-center" id="myTab" role="tablist">
+            {% regroup skills by category.parent as skill_categories %}
+            {% for skill_category in skill_categories %}
 
+
+            <a class="nav-item nav-link {% if skill_category.grouper.id == 2 %} active{% endif %}"
+              id="{{skill_category.grouper.slug}}-tab" data-toggle="tab" href="#{{skill_category.grouper.slug}}"
+              role="tab" aria-controls="{{skill_category.grouper.slug}}" aria-selected="true">
+              <i class="{{skill_category.grouper.icon}}"></i> {{skill_category.grouper}}
+            </a>
+
+            {% endfor %}
+          </nav>
+
+          <div class="tab-content" id="myTabContent">
+            {% for skill_category in skill_categories %}
+            <div class="tab-pane fade  {% if skill_category.grouper.id == 2 %}show active{% endif %}"
+              id="{{skill_category.grouper.slug}}" role="tabpanel" aria-labelledby="{{skill_category.grouper.slug}}">
+              <div class="row">
+
+                {% regroup skill_category.list by category as skillsa %}
+                {% for skill_subcategory in skillsa %}
+
+                <div class="col-md-4 mt-4">
+                  <h3 class="skillgrouptitle">{{skill_subcategory.grouper}}</h3>
+                  <hr class="solidblue mb-4">
+
+                  {% for skill in skill_subcategory.list %}
+                  <p class="skills-heading">{{ skill.title }}</p>
+                  <div class="progress skills mb-2">
+                    <div class="progress-bar skillbar" role="progressbar" style="width: {{ skill.skill }}%"
+                      aria-valuenow="{{ skill.skill }}" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+                {% endfor %}
+
+              </div>
+            </div>
+
+            {% endfor %}
           </div>
-          <div class="tab-pane fade" id="dm" role="tabpanel" aria-labelledby="dm">2</div>
-          <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design">Etsy mixtape 3</div>
+
+
+
+
         </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<section class="">
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col-md-12 ">
+        <div class="top-title">
+          <h2 class="sectiontitle">My Story</h2>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>Title</h3>
+        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
+          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
+          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
+          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
+          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
+          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
+          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
+        </p>
+
       </div>
       <div class="col-md-6">
         <h3>Title</h3>
@@ -257,37 +178,44 @@
       </div>
 
     </div>
-    </div>
-  </section>
-  <section>
+  </div>
+  </div>
+</section>
+<section>
+  <div class="container">
     <div class="row">
       <div class="col-md-12 mt-4">
-        <h2 class="sectiontitle">Work Experience</h2>
-        <span class="solid mb-4"></span>
+        <div class="top-title">
+          <h2 class="sectiontitle">Work Experience</h2>
+
+        </div>
       </div>
       <div class="col-md-12">
 
         <div class="main-timeline">
 
           <!-- start experience section-->
+
+          {% for work_exp in work %}
+
           <div class="timeline">
 
             <div class="date-content">
               <div class="date-outer">
                 <span class="date">
-                  <span class="month">Since</span>
-                  <span class="year">2015</span>
+                  <span class="month">{% if work_exp.to_date%} {{work_exp.to_date|date:"Y"}} {%else%} Since {% endif %}
+                  </span>
+                  <span class="year">{{work_exp.from_date|date:"Y"}}</span>
                 </span>
               </div>
             </div>
             <div class="timeline-content">
-              <h5 class="title">iYouth Travel</h5>
-              <h6 class="title">Digital Marketing Manager / Digital Account Manager</h5>
+              <h5 class="title">{{work_exp.title}}</h5>
+              <h6 class="title">{{work_exp.duties}}</h5>
                 <p class="description">
                 <div class="row">
                   <div class="col-md-12">
-                    <p>Υπεύθυνος όλης της digital παρουσίας της εταιρίας iYouth Travel. Τουριστικό γραφείο που
-                      ειδικεύετε στον οργανωμένο νεανικό τουρισμό και στα μεμονωμένα ταξιδιωτικά πακέτα</p>
+                    <p>{{work_exp.description}}</p>
                   </div>
                   <div class="col-12">
                     <ul class="work fa-ul">
@@ -305,179 +233,53 @@
                 </p>
             </div>
           </div>
+          {%endfor%}
+
           <!-- end experience section-->
 
-          <!-- start experience section-->
-          <div class="timeline">
 
-            <div class="date-content">
-              <div class="date-outer">
-                <span class="date">
-                  <span class="month">Since</span>
-                  <span class="year">2015</span>
-                </span>
-              </div>
-            </div>
-            <div class="timeline-content">
-              <h5 class="title">Freelancer</h5>
-              <h6 class="title">Digital Marketing Manager / Digital Account Manager</h5>
-                <p class="description">
-                <div class="row">
-                  <div class="col-md-12">
-                    <p>Υπεύθυνος όλης της digital παρουσίας της εταιρίας iYouth Travel. Τουριστικό γραφείο που
-                      ειδικεύετε στον οργανωμένο νεανικό τουρισμό και στα μεμονωμένα ταξιδιωτικά πακέτα</p>
-                  </div>
-                  <div class="col-6">
-                    <ul class="work">
-                      <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-                      <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-
-                    </ul>
-                  </div>
-                  <div class="col-6">
-                    <ul class="work">
-                      <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-                      <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-
-                    </ul>
-
-                  </div>
-                </div>
-                </p>
-            </div>
-          </div>
-          <!-- end experience section-->
-
-          <!-- start experience section-->
-          <div class="timeline">
-
-            <div class="date-content">
-              <div class="date-outer">
-                <span class="date">
-                  <span class="month">2011</span>
-                  <span class="year">2014</span>
-                </span>
-              </div>
-            </div>
-            <div class="timeline-content">
-              <h5 class="title">to-mati.net</h5>
-              <p class="description">
-              <div class="row">
-                <div class="col-md-12">
-                  <p>Υπεύθυνος όλης της digital παρουσίας της εταιρίας iYouth Travel. Τουριστικό γραφείο που ειδικεύετε
-                    στον οργανωμένο νεανικό τουρισμό και στα μεμονωμένα ταξιδιωτικά πακέτα</p>
-                </div>
-                <div class="col-6">
-                  <ul class="work">
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <ul class="work">
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-
-                  </ul>
-
-                </div>
-              </div>
-              </p>
-            </div>
-          </div>
-          <!-- end experience section-->
-
-          <!-- start experience section-->
-          <div class="timeline">
-
-            <div class="date-content">
-              <div class="date-outer">
-                <span class="date">
-                  <span class="month">2008</span>
-                  <span class="year">2010</span>
-                </span>
-              </div>
-            </div>
-            <div class="timeline-content">
-              <h5 class="title">Genesis P.R.</h5>
-              <p class="description">
-              <div class="row">
-                <div class="col-md-12">
-                  <p>Υπεύθυνος όλης της digital παρουσίας της εταιρίας iYouth Travel. Τουριστικό γραφείο που ειδικεύετε
-                    στον οργανωμένο νεανικό τουρισμό και στα μεμονωμένα ταξιδιωτικά πακέτα</p>
-                </div>
-                <div class="col-6">
-                  <ul class="work">
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <ul class="work">
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-
-                  </ul>
-
-                </div>
-              </div>
-              </p>
-            </div>
-          </div>
-          <!-- end experience section-->
-          <!-- start experience section-->
-          <div class="timeline">
-            <div class="date-content">
-              <div class="date-outer">
-                <span class="date">
-                  <span class="month">2007</span>
-                  <span class="year">2011</span>
-                </span>
-              </div>
-            </div>
-            <div class="timeline-content">
-              <h5 class="title">ideal Holidays</h5>
-              <p class="description">
-              <div class="row">
-                <div class="col-md-12">
-                  <p>Υπεύθυνος όλης της digital παρουσίας της εταιρίας iYouth Travel. Τουριστικό γραφείο που ειδικεύετε
-                    στον οργανωμένο νεανικό τουρισμό και στα μεμονωμένα ταξιδιωτικά πακέτα</p>
-                </div>
-                <div class="col-6">
-                  <ul class="work">
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <ul class="work">
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-                    <li class=""><i class="fa fa-check" aria-hidden="true"></i>Cras justo odio</li>
-
-                  </ul>
-
-                </div>
-              </div>
-              </p>
-            </div>
-          </div>
-          <!-- end experience section-->
 
         </div>
 
       </div>
     </div>
-  </section>
-  <section>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
     <div class="row">
       <div class="col-md-12 ">
-        <h2 class="sectiontitle">Blog</h2>
-        <span class="solid mb-4"></span>
+        <div class="top-title">
+          <h2 class="sectiontitle">Latest Posts</h2>
+        </div>
       </div>
       <div class="col-md-12 ">
+        <div class="row">
+          {% for post in posts %}
+          
+          <div class="col-md-4 ">
+            <div class="blog-entry justify-content-end">
+              <a href="single.html" class="block-20">
+                <img class="card-img-top" src="{{post.thumbnail.url}}" alt="">
+              </a>
+              <div class="text mt-3 float-right ">
+                <div class="d-flex align-items-center mb-3 ">
+                  <p class="mb-0 meta"">
+	                	<span class=" mr-2"><i class="fas fa-calendar-day"></i> {{post.created|date:'d/m/y'}}</span>
+                    <a href="#" class="mr-2"><i class="fas fa-tag"></i> {{post.category}}</a>
+                  </p>
+                </div>
+                <h3 class="heading"><a href="single.html">{{post.title}}</a></h3>
+                <p>{{post.body|striptags|truncatechars:80}}</p>
+              </div>
+            </div>
+          </div>
+
+          {% endfor %}
+          
+        </div>
 
 
 
@@ -487,146 +289,76 @@
       </div>
     </div>
 
-
-  </section>
-  <section class="">
+  </div>
+</section>
+<section class="portfolio sectiona">
+  <div class="container">
     <div class="row mt-4">
       <div class="col-md-12 ">
-        <h2 class="sectiontitle">Portfolio</h2>
-        <span class="solid mb-4"></span>
+        <div class="top-title">
+          <h2 class="sectiontitle">Portfolio</h2>
+        </div>
       </div>
 
 
       <div class="col-md-12">
-     
-      </div>
 
+
+
+
+        <div class="filters">
+          <ul>
+
+            <li class="active" data-filter="*">All</li>
+            {% for categories in portfolio_categories %}
+            <li data-filter=".{{categories.slug}}">{{categories.title}}</li>
+
+            {%endfor%}
+
+          </ul>
+        </div>
+
+        <div class="filters-content">
+          <div class="row grid">
+
+            {% for item in portfolio %}
+            <div class="col-sm-4 all {{item.category.slug}}">
+              <div class="box item">
+                <img src="{{item.thumbnail.url}}">
+                <div class="box-content">
+                  <div class="inner-content">
+                    <h3 class="title">{{item.title}}</h3>
+                    <span class="post">{{item.category}}</span>
+                    <ul class="icon">
+                      <li><a href="#"><i class="fa fa-search"></i></a></li>
+                      <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {%endfor%}
+
+
+
+
+
+          </div>
+        </div>
+
+      </div>
 
     </div>
-  </section>
-  <section class="portfolio sectiona">
-   
-      <div class="top-side">
-        <h4 class="title">MY WORKS</h4>
-        <h2>PORTFOLIO</h2>
-      </div>
+  </div>
+</section>
 
-      <div class="filters">
-        <ul>
-          <li class="active" data-filter="*">All</li>
-          <li data-filter=".corporate">Corporate</li>
-          <li data-filter=".personal">Personal</li>
-          <li data-filter=".agency">Agency</li>
-          <li data-filter=".portal">Portal</li>
-        </ul>
-      </div>
-
-      <div class="filters-content">
-        <div class="row grid">
-          <div class="col-sm-4 all corporate">
-            <div class="box item">
-              <img src="https://bestjquery.com/tutorial/hover-effect/demo262/images/img-2.jpg">
-              <div class="box-content">
-                <div class="inner-content">
-                  <h3 class="title">taxidevoumemazi.gr</h3>
-                  <span class="post">Website</span>
-                  <ul class="icon">
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 all personal">
-            <div class="box item">
-              <img src="https://bestjquery.com/tutorial/hover-effect/demo262/images/img-2.jpg">
-              <div class="box-content">
-                <div class="inner-content">
-                  <h3 class="title">taxidevoumemazi.gr</h3>
-                  <span class="post">Website</span>
-                  <ul class="icon">
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 all agency">
-            <div class="box item">
-              <img src="https://bestjquery.com/tutorial/hover-effect/demo262/images/img-2.jpg">
-              <div class="box-content">
-                <div class="inner-content">
-                  <h3 class="title">taxidevoumemazi.gr</h3>
-                  <span class="post">Website</span>
-                  <ul class="icon">
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 all portal">
-            <div class="box item">
-              <img src="https://bestjquery.com/tutorial/hover-effect/demo262/images/img-2.jpg">
-              <div class="box-content">
-                <div class="inner-content">
-                  <h3 class="title">taxidevoumemazi.gr</h3>
-                  <span class="post">Website</span>
-                  <ul class="icon">
-                    <li><a href="#"><i class="fa fa-search"></i></a></li>
-                    <li><a href="#"><i class="fa fa-link"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-   
-  </section>
-  <section class="">
+<section class="">
+  <div class="container">
     <div class="row mt-4">
       <div class="col-md-12 ">
-        <h2 class="sectiontitle">Contact me</h2>
-        <span class="solid mb-4"></span>
-      </div>
-      <div class="col-md-6">
-        <h3>Title</h3>
-        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
-          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
-          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
-          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
-          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
-          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
-          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
-        </p>
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="webd-tab" data-toggle="tab" href="#webd" role="tab" aria-controls="webd"
-              aria-selected="true">Web Development/Programming</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="dm-tab" data-toggle="tab" href="#dm" role="tab" aria-controls="dm"
-              aria-selected="false">Digital Marketing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="design"
-              aria-selected="false">Design</a>
-          </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="webd" role="tabpanel" aria-labelledby="webd">
-            asfasdf
-
-          </div>
-          <div class="tab-pane fade" id="dm" role="tabpanel" aria-labelledby="dm">2</div>
-          <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design">Etsy mixtape 3</div>
+        <div class="top-title">
+          <h2 class="sectiontitle">Contact me</h2>
         </div>
       </div>
       <div class="col-md-6">
@@ -640,11 +372,34 @@
           magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
           facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
         </p>
+
+
+
+
+
+      </div>
+      <div class="col-md-6">
+        <h3>Title</h3>
+        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
+          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
+          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
+          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
+          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
+          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
+          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
+        </p>
       </div>
 
     </div>
-    </div>
-  </section>
 
-</main><!-- /.container -->
+  </div>
+</section>
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright © Your Website 2020</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
 {% endblock body %}
