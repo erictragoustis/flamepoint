@@ -22,6 +22,8 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('pages.urls', 'pages'), namespace='pages')),
+    path('blog/', include(('blog.urls', 'blog'), namespace='blog')),
+    path('portfolio/', include(('portfolio.urls', 'portfolio'), namespace='portfolio')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
 

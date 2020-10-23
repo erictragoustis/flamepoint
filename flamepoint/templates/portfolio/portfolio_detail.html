@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{% include "nav.html" %}
+<section class="fpoint-section portfolio-header">
+    <div class="container">
+        <h2 class="inside-header">Portfolio > {{portfolio.category}} > {{portfolio.title }}</h2>
+
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="port-image">
+                <img src="{{portfolio.feat_image.url}}" class="img-fluid">
+            </div>
+        </div>
+        {% if portfolio.technologies.all %}
+        <div class="row mt-4 technologies">
+            {%for tech in portfolio.technologies.all%}
+
+            <div class="col-6 col-md-3 techno mt-4">
+                <div class=""><i class="{{tech.icon}} tech-icon"></i></div>
+                <div class="">{{tech.title}}</div>
+
+            </div>
+            {%endfor%}
+        </div>
+        {%endif%}
+
+        <div class="row mt-4 mb-4">
+
+            <div class="col-md-7  mt-2">
+                <h2>{{portfolio.title}}</h2>
+                {% if portfolio.description %}
+                {{portfolio.description|safe}}
+                {% endif %}
+            </div>
+            <div class="col-md-5  mt-2">
+                <dl class="row">
+                    {% if portfolio.creation_date %}
+                    <dt class="col-sm-5">Creation date:</dt>
+                    <dd class="col-sm-7">{{portfolio.creation_date|date:'Y'}}</dd>
+                    {% endif %}
+                    {% if portfolio.url %}
+                    <dt class="col-sm-5">URL:</dt>
+                    <dd class="col-sm-7">{{portfolio.url}}
+
+                    </dd>
+                    {% endif %}
+                    {% if portfolio.section %}
+                    <dt class="col-sm-5">Sector:</dt>
+                    <dd class="col-sm-7">{{portfolio.section}}
+
+                    </dd>
+                    {% endif %}   
+                </dl>
+                {% if portfolio.url %}
+                <a href="{{portfolio.url}}" target="_blank" class="btn btn-primary btn-block mt-4">Visit Website</a>
+                {% endif %}
+         
+                {% if portfolio.social_url %}
+                <a href="{{portfolio.social_url}}" target="_blank" class="btn btn-primary btn-block mt-4">Visit Profile</a>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock body %}
+{% block extrajsimport %}
+<script src={% static "js/main.js" %}></script>
+{% endblock extrajsimport %}

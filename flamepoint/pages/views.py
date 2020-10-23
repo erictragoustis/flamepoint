@@ -17,12 +17,12 @@ class HomePage(TemplateView):
         portCat = Category.objects.all()
         portfolio = Portfolio.objects.all()
         #allskills = Skill.objects.values('category__parent__title').values('category__title', 'title').order_by('category__parent')
-        allskills = Skill.objects.order_by('category__parent').values('category__parent__title','category__title', 'title')
+        allskills = Skill.objects.order_by('sort').values('category__parent__title','category__title', 'title')
         context["allskills"] = allskills
-        context["skills"] = skills.order_by('category__parent','category')
+        context["skills"] = skills.order_by('category__parent__sort','category__parent','category')
         context["work"] = work
         context["portfolio_categories"] = portCat
-        context["portfolio"] = portfolio
+        context["portfolio"] = portfolio.order_by('-is_featured')
         context["posts"] = posts
 
         return context

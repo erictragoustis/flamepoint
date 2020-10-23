@@ -2,27 +2,7 @@
 {% load static %}
 
 {% block body %}
-<nav class="navbar navbar-expand-lg navbar-dark fpoint_navbar fpoint-navbar-light site-navbar-target"
-  id="fpoint-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">E.Tragoustis</a>
-    <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
-      data-target="#fpoint-nav" aria-controls="fpoint-nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="oi oi-menu"></span> Menu
-    </button>
-    <div class="collapse navbar-collapse" id="fpoint-nav">
-      <ul class="navbar-nav nav ml-auto">
-        <li class="nav-item"><a href="#home-section" class="nav-link "><span>Home</span></a></li>
-        <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-        <li class="nav-item"><a href="#story-section" class="nav-link"><span>My Story</span></a></li>
-        <li class="nav-item"><a href="#experience-section" class="nav-link"><span>Experience</span></a></li>
-        <li class="nav-item"><a href="#portfolio-section" class="nav-link"><span>Portfolio</span></a></li>
-        <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
-        <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact/Hire</span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+{% include "homenav.html" %}
 
 
 <section class="fpoint-section" id="home-section">
@@ -31,6 +11,21 @@
       <div class="col-md-6 col-lg-5 ">
         <img src="{% static 'css/img/eric.jpg' %}" alt="eric"
           class="rounded-circle img-thumbnail img-fluid mx-auto d-block" />
+
+        <div class="row mt-4 mb-4 	justify-content-center ">
+          <div class="col-2">
+            <i class="fab fa-github icon-4x fa-2x"></i>
+          </div>
+          <div class="col-2">
+            <i class="fab fa-twitter icon-4x fa-2x"></i>
+          </div>
+          <div class="col-2">
+            <i class="fab fa-instagram icon-4x fa-2x"></i>
+          </div>
+          <div class="col-2">
+            <i class="fab fa-facebook-messenger fa-2x "></i>
+          </div>
+        </div>
       </div>
 
       <div class="col-md-6 col-lg-7 pl-lg-5 ">
@@ -45,11 +40,13 @@
             </div>
 
 
+
             <div class="row mt-2">
               <div class="col-md-12">
                 <p>Όλα άρχισαν στην ηλικία των 11 όταν ήρθα σε επαφή με τον πρώτο Η/Υ που ήρθε στο σπίτι έναν
                   <strong><span class="emphasis">AMSTRAD
-                     CPC6128</span></strong> (υπάρχει και λειτουργεί ακόμα!) και άρχισα να αντιγράφω Mini games σε BASIC που
+                      CPC6128</span></strong> (υπάρχει και λειτουργεί ακόμα!) και άρχισα να αντιγράφω Mini games σε
+                  BASIC που
                   είχε στο
                   manual
                   του. Η συνέχεια ήταν αναπόφευκτη, την εποχή του Γυμνασίου-Λυκείου, άρχισα να μαθαίνω από βιβλία
@@ -74,9 +71,12 @@
       </div>
     </div>
   </div>
+  <svg width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+    <path d="M0 50 L50 90 L100 50 V100 H0" fill="#111111" />
+  </svg>
 </section>
 <section class="section-skills" id="skills-section">
-  <div class="container">
+  <div class="container  pb-4">
     <div class="row mt-4">
       <div class="col-md-12 mb-2">
         <div class="top-title">
@@ -91,7 +91,7 @@
             {% for skill_category in skill_categories %}
 
 
-            <a class="nav-item nav-link {% if skill_category.grouper.id == 2 %} active{% endif %}"
+            <a class="nav-item nav-link {% if skill_category.grouper.sort == 2 %} active{% endif %}"
               id="{{skill_category.grouper.slug}}-tab" data-toggle="tab" href="#{{skill_category.grouper.slug}}"
               role="tab" aria-controls="{{skill_category.grouper.slug}}" aria-selected="true">
               <i class="{{skill_category.grouper.icon}}"></i> {{skill_category.grouper}}
@@ -102,7 +102,7 @@
 
           <div class="tab-content" id="myTabContent">
             {% for skill_category in skill_categories %}
-            <div class="tab-pane fade  {% if skill_category.grouper.id == 2 %}show active{% endif %}"
+            <div class="tab-pane fade  {% if skill_category.grouper.sort == 2 %}show active{% endif %}"
               id="{{skill_category.grouper.slug}}" role="tabpanel" aria-labelledby="{{skill_category.grouper.slug}}">
               <div class="row">
 
@@ -141,47 +141,68 @@
 
 </section>
 
-
-
-<section class="" id="story-section">
+<section class="portfolio sectiona portfoliobg" id="portfolio-section">
   <div class="container">
-    <div class="row mt-4">
+    <div class="row pt-4 pb-4">
       <div class="col-md-12 ">
         <div class="top-title">
-          <h2 class="sectiontitle">My Story</h2>
+          <h2 class="sectiontitle">Portfolio</h2>
         </div>
       </div>
-      <div class="col-md-6">
-        <h3>Title</h3>
-        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
-          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
-          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
-          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
-          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
-          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
-          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
-        </p>
+
+
+      <div class="col-md-12">
+
+
+
+
+        <div class="filters">
+          <ul>
+
+            <li class="active" data-filter="*">All</li>
+            {% for categories in portfolio_categories %}
+            <li data-filter=".{{categories.slug}}">{{categories.title}}</li>
+
+            {%endfor%}
+
+          </ul>
+        </div>
+
+        <div class="filters-content">
+          <div class="row grid">
+            {% for item in portfolio %}
+            <div class="col-sm-4 all {{item.category.slug}} mb-2">
+              <div class="box item">
+                <img src="{{item.thumbnail.url}}">
+                <div class="box-content">
+                  <div class="inner-content">
+                    <h3 class="title">{{item.title}}</h3>
+                    <span class="post">{{item.category}}</span>
+                    <ul class="icon">
+                      <li><a href="{% url 'portfolio:portfolioDetail' item.slug %}"><i class="fa fa-search"></i></a>
+                      </li>
+                      <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {%endfor%}
+          </div>
+        </div>
 
       </div>
-      <div class="col-md-6">
-        <h3>Title</h3>
-        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
-          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
-          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
-          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
-          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
-          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
-          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
-        </p>
+      <div class="col-12 pb-4 text-center">
+
+        <button type="button" class="btn btn-outline-dark"> See All</button>
       </div>
 
     </div>
   </div>
-  </div>
 </section>
-<section class="section-skills" id="experience-section" >
+
+
+<section class="section-skills" id="experience-section">
   <div class="container">
     <div class="row">
       <div class="col-md-12 mt-4">
@@ -247,66 +268,47 @@
 </section>
 
 
-<section class="portfolio sectiona " id="portfolio-section">
+
+
+<section class="" id="story-section">
+
   <div class="container">
-    <div class="row mt-4">
+    <div class="row pt-4 pb-4">
       <div class="col-md-12 ">
         <div class="top-title">
-          <h2 class="sectiontitle">Portfolio</h2>
+          <h2 class="sectiontitle">My Story</h2>
         </div>
       </div>
+      <div class="col-md-6">
+        <h3>Title</h3>
+        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
+          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
+          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
+          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
+          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
+          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
+          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
+        </p>
 
-
-      <div class="col-md-12">
-
-
-
-
-        <div class="filters">
-          <ul>
-
-            <li class="active" data-filter="*">All</li>
-            {% for categories in portfolio_categories %}
-            <li data-filter=".{{categories.slug}}">{{categories.title}}</li>
-
-            {%endfor%}
-
-          </ul>
-        </div>
-
-        <div class="filters-content">
-          <div class="row grid">
-
-            {% for item in portfolio %}
-            <div class="col-sm-4 all {{item.category.slug}}">
-              <div class="box item">
-                <img src="{{item.thumbnail.url}}">
-                <div class="box-content">
-                  <div class="inner-content">
-                    <h3 class="title">{{item.title}}</h3>
-                    <span class="post">{{item.category}}</span>
-                    <ul class="icon">
-                      <li><a href="#"><i class="fa fa-search"></i></a></li>
-                      <li><a href="#"><i class="fa fa-link"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {%endfor%}
-
-
-
-
-
-          </div>
-        </div>
-
+      </div>
+      <div class="col-md-6">
+        <h3>Title</h3>
+        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
+          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
+          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
+          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
+          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
+          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
+          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
+        </p>
       </div>
 
     </div>
   </div>
+
+
 </section>
 <section id="blog-section" class="section-skills">
   <div class="container">
@@ -320,35 +322,30 @@
       <div class="col-md-12 ">
         <div class="row">
           {% for post in posts %}
-          
           <div class="col-md-4 ">
             <div class="blog-entry justify-content-end">
-              <a href="single.html" class="block-20">
+              <a href="{% url 'blog:postDetail' post.slug %}" class="block-20">
                 <img class="card-img-top" src="{{post.thumbnail.url}}" alt="">
               </a>
               <div class="text mt-3 float-right ">
                 <div class="d-flex align-items-center mb-3 ">
                   <p class="mb-0 meta">
-	                	<span class=" mr-2"><i class="fas fa-calendar-day"></i> {{post.created|date:'d/m/y'}}</span>
+                    <span class=" mr-2"><i class="fas fa-calendar-day"></i> {{post.created|date:'d/m/y'}}</span>
                     <a href="#" class="mr-2"><i class="fas fa-tag"></i> {{post.category}}</a>
                   </p>
                 </div>
-                <h3 class="heading"><a href="single.html">{{post.title}}</a></h3>
+                <h3 class="heading"><a href="{% url 'blog:postDetail' post.slug %}">{{post.title}}</a></h3>
                 <p>{{post.body|striptags|truncatechars:80}}</p>
               </div>
             </div>
           </div>
-
           {% endfor %}
-          
         </div>
-
-
-
-
-
-
       </div>
+      <div class="col-12 pb-4 mt-4 pt-4 text-center">
+
+        <button type="button" class="btn btn-outline-dark"> Read All</button>
+              </div>
     </div>
 
   </div>
@@ -395,11 +392,9 @@
 
   </div>
 </section>
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white">Copyright © Your Website 2020</p>
-  </div>
-  <!-- /.container -->
-</footer>
 
 {% endblock body %}
+{% block extrajsimport %}
+<script src={% static "js/main.js" %}></script>
+
+{% endblock extrajsimport %}

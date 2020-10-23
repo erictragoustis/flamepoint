@@ -12,6 +12,7 @@ class SkillCategory (TimeStampedModel):
     title = models.CharField(max_length=200)
     icon = models.CharField(max_length=200,blank=True, null=True )
     slug = AutoSlugField("Skill Category Title", unique=True, always_update=False, populate_from="title")
+    sort = models.IntegerField(default="",null=True, blank=True,)
     parent = models.ForeignKey('self',blank=True, null=True ,related_name='children',on_delete=models.CASCADE)
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL,null=True, blank=True,on_delete=models.CASCADE)
 
