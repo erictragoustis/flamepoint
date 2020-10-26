@@ -25,6 +25,7 @@ django-select2 = "*"
 gunicorn = "*"
 psycopg2-binary = "*"
 django-environ = "*"
+django-modeltranslation = "*"
 
 [requires]
 python_version = "3.8"

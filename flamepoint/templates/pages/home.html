@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{%load i18n%}
 {% block body %}
 {% include "homenav.html" %}
 
@@ -207,7 +207,7 @@
     <div class="row">
       <div class="col-md-12 mt-4">
         <div class="top-title">
-          <h2 class="sectiontitle">Work Experience</h2>
+          <h2 class="sectiontitle" lang="el">{% trans 'Experience' %}</h2>
 
         </div>
       </div>
@@ -276,7 +276,7 @@
     <div class="row pt-4 pb-4">
       <div class="col-md-12 ">
         <div class="top-title">
-          <h2 class="sectiontitle">My Story</h2>
+          <h2 class="sectiontitle" lang="el">{% trans 'My Story' %}</h2>
         </div>
       </div>
       <div class="col-md-6">
@@ -316,7 +316,7 @@
     <div class="row">
       <div class="col-md-12 ">
         <div class="top-title">
-          <h2 class="sectiontitle">Latest Posts</h2>
+          <h2 class="sectiontitle">{% trans 'Latest Posts' %}</h2>
         </div>
       </div>
       <div class="col-md-12 ">
@@ -327,7 +327,7 @@
               <a href="{% url 'blog:postDetail' post.slug %}" class="block-20">
                 <img class="card-img-top" src="{{post.thumbnail.url}}" alt="">
               </a>
-              <div class="text mt-3 float-right ">
+              <div class="text mt-3 float-left ">
                 <div class="d-flex align-items-center mb-3 ">
                   <p class="mb-0 meta">
                     <span class=" mr-2"><i class="fas fa-calendar-day"></i> {{post.created|date:'d/m/y'}}</span>
@@ -335,7 +335,7 @@
                   </p>
                 </div>
                 <h3 class="heading"><a href="{% url 'blog:postDetail' post.slug %}">{{post.title}}</a></h3>
-                <p>{{post.body|striptags|truncatechars:80}}</p>
+                <p>{{post.body|striptags|safe|truncatechars:80}}</p>
               </div>
             </div>
           </div>
@@ -355,37 +355,42 @@
     <div class="row mt-4">
       <div class="col-md-12 ">
         <div class="top-title">
-          <h2 class="sectiontitle">Contact me</h2>
+          <h2 class="sectiontitle">{% trans 'Contact me' %}</h2>
         </div>
       </div>
-      <div class="col-md-6">
-        <h3>Title</h3>
-        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
-          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
-          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
-          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
-          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
-          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
-          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
-        </p>
+      <div class="col-md-12 mb-4 pb-4">
+        
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="firstname">{% trans 'First Name' %}</label>
+              <input type="text" class="form-control eform" id="firstname" placeholder="Eric">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="lastname">{% trans 'Last Name' %}</label>
+              <input type="text" class="form-control eform" id="lastname" placeholder="Tragoustis">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">{% trans 'E-mail' %}</label>
+            <input type="email" class="form-control eform" id="email" placeholder="bestemail@email.com">
+          </div>
+          <div class="form-group">
+            <label for="inputAddress2">{% trans 'Subject' %}</label>
+            <input type="text" class="form-control eform" id="inputAddress2" placeholder="I want to hire you">
+          </div>
+          
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">{% trans 'Message' %}</label>
+            <textarea class="form-control eform" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-block btn-outline-dark">{% trans 'Send' %}</button>
+        </form>
 
 
 
 
-
-      </div>
-      <div class="col-md-6">
-        <h3>Title</h3>
-        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
-          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
-          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
-          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
-          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
-          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
-          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
-        </p>
+    
       </div>
 
     </div>

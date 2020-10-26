@@ -50,14 +50,21 @@ class Portfolio (TimeStampedModel):
     creation_date = models.DateField(null=True, blank=True,)
     section = models.CharField(max_length=200,null=True, blank=True)
     is_featured = models.BooleanField(default=False)
+    is_video = models.BooleanField(default=False)
+    video_id = models.CharField(max_length=200,null=True, blank=True)
     url = models.URLField(max_length=200, null=True, blank=True)
     social_url = models.URLField(max_length=200, null=True, blank=True)
-    feat_image = models.ImageField(upload_to='portfolio/images/')
+    feat_image = models.ImageField(upload_to='portfolio/images/',null=True, blank=True)
+    front_image = models.ImageField(upload_to='portfolio/images/',null=True, blank=True)
 
     thumbnail = ImageSpecField(source='feat_image',
                                     processors=[ResizeToFill(800, 533)],
                                     format='JPEG',
                                     options={'quality': 60})
+    thumbnail_front = ImageSpecField(source='front_image',
+                                processors=[ResizeToFill(800, 533)],
+                                format='JPEG',
+                                options={'quality': 60})
 
     def __str__(self):
         return self.title

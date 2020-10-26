@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 import environ
+from django.utils.translation import ugettext_lazy as _
+
 
 env = environ.Env(
     # set casting, default value
@@ -52,6 +54,7 @@ INSTALLED_APPS = [
     #Imported
     'ckeditor',
     'ckeditor_uploader',
+    'modeltranslation',
     #Apps
     'users',
     'pages',
@@ -63,6 +66,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -94,7 +98,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'flamepoint.wsgi.application'
 
-
+LOCALE_PATHS = (  
+os.path.join(BASE_DIR,'locale'),
+)
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -128,8 +134,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
 
+LANGUAGES = [
+    ('en', _('English')),
+    ('el', _('Greek')),
+]
+
+LANGUAGE_CODE = 'en'
 TIME_ZONE = 'Europe/Athens'
 
 USE_I18N = True

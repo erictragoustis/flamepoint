@@ -6,6 +6,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
-class PortfolioDetailView(LoginRequiredMixin,DetailView):
+class PortfolioDetailView(DetailView):
     model = Portfolio
     template_name = 'portfolio/portfolio_detail.html'

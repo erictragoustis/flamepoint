@@ -23,6 +23,6 @@ class HomePage(TemplateView):
         context["work"] = work
         context["portfolio_categories"] = portCat
         context["portfolio"] = portfolio.order_by('-is_featured')
-        context["posts"] = posts
+        context["posts"] = posts.order_by('-created')[:3]
 
         return context

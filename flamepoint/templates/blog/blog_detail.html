@@ -1,12 +1,55 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{%load i18n%}
 {% block body %}
 {% include "nav.html" %}
-<section class="fpoint-section" >
-    <div class="container">
-        <h2>{{ post.title }}</h2>
+
+<section>
+    <div class="jumbotron jumbotron-fluid" style="background-image: url('{{post.feat_image.url}}');">
+        <div class="overlay"></div>
+        <div class="inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="display-4">{{ post.title }}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <hr class="solid">
+                    </div>
+                </div>
+                <p> <span class=" mr-2"><i class="fas fa-calendar-day"></i> {{post.created|date:'d/m/y'}}</span><i
+                        class="fas fa-tag"></i> {{post.category}}</p>
+            </div>
         </div>
-        </section>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-9 postbody">
+                {{ post.body|safe }}
+            </div>
+            <div class="col-md-3">
+                <div class="sidebar-box ftco-animate fadeInUp ftco-animated">
+                    <h3 class="heading-sidebar">{% trans 'Categories' %}</h3>
+          
+                  <ul class="categories">
+                      {%for category in categories%}
+                    <li><a href="#">{{category.title}} <span>({{category.dcount}})</span></a></li>
+
+                    {%endfor%}
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 {% endblock body %}

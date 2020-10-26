@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block body %}
 {% include "nav.html" %}
 <section class="fpoint-section portfolio-header">
@@ -11,11 +11,26 @@
 </section>
 <section>
     <div class="container">
+        {%if portfolio.is_video %}
+        <div class="video-container">
+            
+            <iframe src="https://www.youtube.com/embed/{{portfolio.video_id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        {%else%}
+        {% if portfolio.url %}
         <div class="d-flex justify-content-center">
             <div class="port-image">
                 <img src="{{portfolio.feat_image.url}}" class="img-fluid">
             </div>
         </div>
+        {%else%}
+        <div class="d-flex justify-content-center">
+      
+                <img src="{{portfolio.feat_image.url}}" class="img-fluid">
+     
+        </div>
+        {%endif%}
+        {%endif%}
         {% if portfolio.technologies.all %}
         <div class="row mt-4 technologies">
             {%for tech in portfolio.technologies.all%}
@@ -39,8 +54,9 @@
             </div>
             <div class="col-md-5  mt-2">
                 <dl class="row">
+           
                     {% if portfolio.creation_date %}
-                    <dt class="col-sm-5">Creation date:</dt>
+                    <dt class="col-sm-5">{% translate 'Creation date' %}:</dt>
                     <dd class="col-sm-7">{{portfolio.creation_date|date:'Y'}}</dd>
                     {% endif %}
                     {% if portfolio.url %}
@@ -50,18 +66,18 @@
                     </dd>
                     {% endif %}
                     {% if portfolio.section %}
-                    <dt class="col-sm-5">Sector:</dt>
+                    <dt class="col-sm-5">{% trans 'Sector' %}:</dt>
                     <dd class="col-sm-7">{{portfolio.section}}
 
                     </dd>
                     {% endif %}   
                 </dl>
                 {% if portfolio.url %}
-                <a href="{{portfolio.url}}" target="_blank" class="btn btn-primary btn-block mt-4">Visit Website</a>
+                <a href="{{portfolio.url}}" target="_blank" class="btn btn-primary btn-block mt-4">{% trans 'Visit Website' %}</a>
                 {% endif %}
          
                 {% if portfolio.social_url %}
-                <a href="{{portfolio.social_url}}" target="_blank" class="btn btn-primary btn-block mt-4">Visit Profile</a>
+                <a href="{{portfolio.social_url}}" target="_blank" class="btn btn-primary btn-block mt-4">{% trans 'Visit Profile' %}</a>
                 {% endif %}
             </div>
         </div>
