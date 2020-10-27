@@ -42,6 +42,7 @@ class MainProfile (TimeStampedModel):
     surname = models.CharField(max_length=200)
     main_image = models.ImageField(upload_to='portfolio/images/',null=True, blank=True)
     cv = models.FileField(upload_to='porfolio/uploads/')
+    email = models.EmailField(max_length=254,null=True, blank=True)
     worktitle = models.CharField(max_length=200)
     story = RichTextUploadingField(null=True, blank=True)
     catchphrase = RichTextUploadingField(null=True, blank=True)

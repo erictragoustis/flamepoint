@@ -16,27 +16,21 @@
             class="rounded-circle img-thumbnail img-fluid mx-auto d-block" />
 
           <div class="row mt-4 mb-4 text-center	justify-content-center ">
-            <div class="col-2">
-              <a class="pro-link" href="{{profile.github}}">
-              <i class="fab fa-github icon-4x fa-fw"></i>
-            </a>
-            </div>
-            <div class="col-2">
-              <a class="pro-link" href="{{profile.twitter}}">
-              <i class="fab fa-twitter icon-4x fa-fw"></i>
-            </a>
-            </div>
-            <div class="col-2">
-              <a class="pro-link" href="{{profile.instagram}}">
-              <i class="fab fa-instagram icon-4x fa-fw"></i>
-            </a>
-            </div>
-            <div class="col-2">
-              <a class="pro-link btn btn-sm" href="{{profile.messeneger}}">
-              <i class="fab fa-facebook-messenger fa-fw "></i>
-            </a>
-            </div>
-            dfsgsdf
+            <ul class="list-inline social-bar">
+              <li class="list-inline-item mr-4"> <a class="pro-link" href="{{profile.github}}">
+                  <i class="fab fa-github icon-4x fa-2x"></i>
+                </a></li>
+              <li class="list-inline-item mr-4"><a class="pro-link" href="{{profile.twitter}}">
+                  <i class="fab fa-twitter icon-4x fa-2x"></i>
+                </a></li>
+              <li class="list-inline-item mr-4"><a class="pro-link" href="{{profile.instagram}}">
+                  <i class="fab fa-instagram icon-4x fa-2x"></i>
+                </a></li>
+              <li class="list-inline-item"><a class="pro-link " href="{{profile.messeneger}}">
+                  <i class="fab fa-facebook-messenger fa-2x"></i>
+                </a></li>
+            </ul>
+
           </div>
         </div>
 
@@ -56,7 +50,7 @@
               <div class="row mt-2">
                 <div class="col-md-12">
                   {{profile.catchphrase|safe}}
-                  
+
                 </div>
               </div>
             </div>
@@ -67,7 +61,8 @@
 
             </div>
             <div class="col-md-6 mb-4">
-              <a href="{{profile.cv.url}}" class="btn btn-block btn-primary py-3 px-3 mt-4 mb-4 ">{% trans 'Download CV'%}</a>
+              <a href="{{profile.cv.url}}"
+                class="btn btn-block btn-outline-primary py-3 px-3 mt-4 mb-4 "><i class="fas fa-cloud-download-alt"></i> {% trans 'Download CV'%}</a>
             </div>
           </div>
 
@@ -85,11 +80,13 @@
       <div class="col-md-12 mb-2">
         <div class="top-title">
           <h2 class="sectiontitle">My Skills</h2>
-          <div class="d-flex justify-content-center skill-typer">    
-            <span class="typer" id="main_typer" data-words="My favorite OS is Linux,I like to code in VS Code,I &hearts; cats" data-colors="#7FB347,#D25252,#569CD6" data-delay="100" data-deleteDelay="1000"></span>
-            <span class="cursor" data-owner="main_typer"></span>
-      
-        </div>
+          <div class="d-flex justify-content-center skill-typer">
+            <span class="typer" id="main_typer"
+              data-words="My favorite OS is Linux,I like to code in VS Code,I &hearts; cats"
+              data-colors="#7FB347,#D25252,#569CD6" data-delay="100" data-deleteDelay="1000"></span>
+            <span class="cursor" data-owner="main_typer" ></span>
+
+          </div>
         </div>
         <div class="col-md-12 mb-2">
 
@@ -295,7 +292,7 @@
         </p>
 
       </div>
- 
+
 
     </div>
   </div>
@@ -342,6 +339,7 @@
 
   </div>
 </section>
+
 <section class="" id="contact-section">
   <div class="container">
     <div class="row mt-4">
@@ -351,33 +349,53 @@
         </div>
       </div>
       <div class="col-md-12 mb-4 pb-4">
+        <div class="row">
+          <div class="col-md-8">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="firstname">{% trans 'First Name' %}</label>
+                  <input type="text" class="form-control eform" id="firstname" placeholder="Eric">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="lastname">{% trans 'Last Name' %}</label>
+                  <input type="text" class="form-control eform" id="lastname" placeholder="Tragoustis">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">{% trans 'E-mail' %}</label>
+                <input type="email" class="form-control eform" id="email" placeholder="bestemail@email.com">
+              </div>
+              <div class="form-group">
+                <label for="inputAddress2">{% trans 'Subject' %}</label>
+                <input type="text" class="form-control eform" id="inputAddress2" placeholder="I want to hire you">
+              </div>
+    
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">{% trans 'Message' %}</label>
+                <textarea class="form-control eform" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-block btn-outline-dark">{% trans 'Send' %}</button>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled fa-ul social-bar">
+              <li class=" mr-4"> 
+                <a class="pro-link" href="{{profile.github}}"><span class="fa-li"><i class="fab fa-github"  ></i></span> Github </a></li>
+            <li class="mr-4"><a class="pro-link" href="{{profile.twitter}}">
+              <span class="fa-li"><i class="fab fa-twitter "></i></span>Twitter
+              </a></li>
+            <li class=" mr-4"><a class="pro-link" href="{{profile.instagram}}">
+              <span class="fa-li"><i class="fab fa-instagram "></i></span>Instagram
+              </a></li>
+            <li class=""><a class="pro-link " href="{{profile.messeneger}}">
+              <span class="fa-li"><i class="fab fa-facebook-messenger "></i></span>Facebook
+              </a></li>
+          </ul>
+          </div>
+        </div>
 
-        <form>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="firstname">{% trans 'First Name' %}</label>
-              <input type="text" class="form-control eform" id="firstname" placeholder="Eric">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="lastname">{% trans 'Last Name' %}</label>
-              <input type="text" class="form-control eform" id="lastname" placeholder="Tragoustis">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">{% trans 'E-mail' %}</label>
-            <input type="email" class="form-control eform" id="email" placeholder="bestemail@email.com">
-          </div>
-          <div class="form-group">
-            <label for="inputAddress2">{% trans 'Subject' %}</label>
-            <input type="text" class="form-control eform" id="inputAddress2" placeholder="I want to hire you">
-          </div>
-
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">{% trans 'Message' %}</label>
-            <textarea class="form-control eform" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-block btn-outline-dark">{% trans 'Send' %}</button>
-        </form>
+        
 
 
 

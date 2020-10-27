@@ -41,7 +41,7 @@
           
                   <ul class="categories">
                       {%for category in categories%}
-                    <li><a href="#">{{category.title}} <span>({{category.dcount}})</span></a></li>
+                    <li><a href="{% url 'blog:postListCategory' category.slug %}">{{category.title}} <span>({{category.dcount}})</span></a></li>
 
                     {%endfor%}
                   </ul>

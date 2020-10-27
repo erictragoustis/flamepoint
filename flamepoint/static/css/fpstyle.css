@@ -58,6 +58,11 @@ body {
   z-index: 2;
 }
 
+.social-bar a{
+  display: block;
+  color: #fff;
+}
+
 .sidebar-box {
   margin-bottom: 30px;
   padding: 25px;
@@ -166,8 +171,10 @@ a:hover, a:focus {
 
 .big {
   font-weight: bold;
-  font-size: 70px;
+  font-size: 60px;
+
   line-height: 0.9;
+  
 }
 
 .btn-outline-dark {
