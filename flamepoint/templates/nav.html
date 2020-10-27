@@ -1,3 +1,4 @@
+{%load i18n%}
 <nav class="navbar navbar-expand-lg navbar-dark fpoint_navbar fpoint-navbar-light site-navbar-target"
   id="fpoint-navbar">
   <div class="container">
@@ -15,6 +16,23 @@
         <li class="nav-item"><a href="{% url 'pages:homepage' %}#story-section" class="nav-link"><span>My Story</span></a></li>
         <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
         <li class="nav-item"><a href="{% url 'pages:homepage' %}#contact-section" class="nav-link"><span>Contact/Hire</span></a></li>
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        <li class="dropdown nav-item">
+          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> {{LANGUAGE_CODE}}</a>
+          <ul class="dropdown-menu" role="menu" id="language-list">
+            {% for language in languages %}
+                <li>
+                  <a href="{% url 'set_language' %}" data-language-code="{{ language.code }}">
+                    {% if language.code == LANGUAGE_CODE %}&#10003;{% else %}&nbsp;&nbsp;{% endif %}
+                
+                    {{ language.name_local }}
+                  </a>
+                </li>
+            {% endfor %}
+          </ul>
+        </li>
       </ul>
     </div>
   </div>

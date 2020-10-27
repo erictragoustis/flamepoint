@@ -5,79 +5,83 @@
 {% include "homenav.html" %}
 
 
-<section class="fpoint-section" id="home-section">
-  <div class="container">
-    <div class="row d-flex">
-      <div class="col-md-6 col-lg-5 ">
-        <img src="{% static 'css/img/eric.jpg' %}" alt="eric"
-          class="rounded-circle img-thumbnail img-fluid mx-auto d-block" />
+<section class="fpoint-section hpcard jumbotron" id="home-section" style="background-image: url('{% static 'img/codebg.jpg' %}')">
+  <div class="overlay"></div>
+  <div class="inner">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-6 col-lg-5 ">
+          <img src="{% static 'css/img/eric.jpg' %}" alt="eric"
+            class="rounded-circle img-thumbnail img-fluid mx-auto d-block" />
 
-        <div class="row mt-4 mb-4 	justify-content-center ">
-          <div class="col-2">
-            <i class="fab fa-github icon-4x fa-2x"></i>
-          </div>
-          <div class="col-2">
-            <i class="fab fa-twitter icon-4x fa-2x"></i>
-          </div>
-          <div class="col-2">
-            <i class="fab fa-instagram icon-4x fa-2x"></i>
-          </div>
-          <div class="col-2">
-            <i class="fab fa-facebook-messenger fa-2x "></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-7 pl-lg-5 ">
-        <div class="row  ">
-          <div class="col-md-12 heading-section ">
-            <h1 class="big"><span class="bigfirst">Eric</span> Tragoustis</h1>
-            <h2 class="expertise">Web Developer / Digital Marketer</h2>
-            <div class="row">
-              <div class="col-md-2 mb-4">
-                <hr class="solid">
-              </div>
+          <div class="row mt-4 mb-4 	justify-content-center ">
+            <div class="col-2">
+              <i class="fab fa-github icon-4x fa-2x"></i>
             </div>
-
-
-
-            <div class="row mt-2">
-              <div class="col-md-12">
-                <p>Όλα άρχισαν στην ηλικία των 11 όταν ήρθα σε επαφή με τον πρώτο Η/Υ που ήρθε στο σπίτι έναν
-                  <strong><span class="emphasis">AMSTRAD
-                      CPC6128</span></strong> (υπάρχει και λειτουργεί ακόμα!) και άρχισα να αντιγράφω Mini games σε
-                  BASIC που
-                  είχε στο
-                  manual
-                  του. Η συνέχεια ήταν αναπόφευκτη, την εποχή του Γυμνασίου-Λυκείου, άρχισα να μαθαίνω από βιβλία
-                  PASCAL,
-                  FORTRAN και C, C++. Στη συνέχεια είδα την επαγγελματική ευκαιρία και μπήκα στον κόσμο του Web
-                  Development
-                  μαθαίνοντας <strong>PHP και HTML/CSS </strong>ώστε να μπορώ να καλύψω αυτή την ανάγκη.</p>
-              </div>
+            <div class="col-2">
+              <i class="fab fa-twitter icon-4x fa-2x"></i>
+            </div>
+            <div class="col-2">
+              <i class="fab fa-instagram icon-4x fa-2x"></i>
+            </div>
+            <div class="col-2">
+              <i class="fab fa-facebook-messenger fa-2x "></i>
             </div>
           </div>
         </div>
 
-        <div class="row mt-md-3">
-          <div class="col-md-6 ">
+        <div class="col-md-6 col-lg-7 pl-lg-5 ">
+          <div class="row  ">
+            <div class="col-md-12 heading-section ">
+              <h1 class="big"><span class="bigfirst">Eric</span> Tragoustis</h1>
+              <h2 class="expertise">Web Developer / Digital Marketer</h2>
+              <div class="row">
+                <div class="col-md-2 mb-4">
+                  <hr class="solid">
+                </div>
+              </div>
 
+
+
+              <div class="row mt-2">
+                <div class="col-md-12">
+
+                  <p>Όλα άρχισαν στην ηλικία των 11 όταν ήρθα σε επαφή με τον πρώτο Η/Υ που ήρθε στο σπίτι έναν
+                    <strong><span class="emphasis">AMSTRAD
+                        CPC6128</span></strong> (υπάρχει και λειτουργεί ακόμα!) και άρχισα να αντιγράφω Mini games σε
+                    BASIC που
+                    είχε στο
+                    manual
+                    του. Η συνέχεια ήταν αναπόφευκτη, την εποχή του Γυμνασίου-Λυκείου, άρχισα να μαθαίνω από βιβλία
+                    PASCAL,
+                    FORTRAN και C, C++. Στη συνέχεια είδα την επαγγελματική ευκαιρία και μπήκα στον κόσμο του Web
+                    Development
+                    μαθαίνοντας <strong>PHP και HTML/CSS </strong>ώστε να μπορώ να καλύψω αυτή την ανάγκη.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6 ">
-            <a href="#" class="btn btn-block btn-primary py-3 px-3 mt-4">Download CV</a>
+
+          <div class="row mt-md-3">
+            <div class="col-md-6 ">
+
+            </div>
+            <div class="col-md-6 ">
+              <a href="#" class="btn btn-block btn-primary py-3 px-3 mt-4">Download CV</a>
+            </div>
           </div>
+
         </div>
-
       </div>
     </div>
+    <svg width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+      <path d="M0 50 L50 90 L100 50 V100 H0" fill="#111111" />
+    </svg>
   </div>
-  <svg width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
-    <path d="M0 50 L50 90 L100 50 V100 H0" fill="#111111" />
-  </svg>
 </section>
 <section class="section-skills" id="skills-section">
   <div class="container  pb-4">
-    <div class="row mt-4">
+    <div class="row pt-4">
       <div class="col-md-12 mb-2">
         <div class="top-title">
           <h2 class="sectiontitle">My Skills</h2>
@@ -159,7 +163,7 @@
         <div class="filters">
           <ul>
 
-            <li class="active" data-filter="*">All</li>
+            <li class="active" data-filter="*">{% trans 'All' %}</li>
             {% for categories in portfolio_categories %}
             <li data-filter=".{{categories.slug}}">{{categories.title}}</li>
 
@@ -171,9 +175,9 @@
         <div class="filters-content">
           <div class="row grid">
             {% for item in portfolio %}
-            <div class="col-sm-4 all {{item.category.slug}} mb-2">
+            <div class="col-sm-6 col-6 col-md-6 col-lg-4 all {{item.category.slug}} mb-2">
               <div class="box item">
-                <img src="{{item.thumbnail.url}}">
+                <img class="lazy" src="{{item.thumbnail.url}}">
                 <div class="box-content">
                   <div class="inner-content">
                     <h3 class="title">{{item.title}}</h3>
@@ -194,7 +198,7 @@
       </div>
       <div class="col-12 pb-4 text-center">
 
-        <button type="button" class="btn btn-outline-dark"> See All</button>
+        <button type="button" class="btn btn-outline-dark"> {% trans 'See All' %}</button>
       </div>
 
     </div>
@@ -207,7 +211,7 @@
     <div class="row">
       <div class="col-md-12 mt-4">
         <div class="top-title">
-          <h2 class="sectiontitle" lang="el">{% trans 'Experience' %}</h2>
+          <h2 class="sectiontitle experience-green" lang="el">{% trans 'Experience' %}</h2>
 
         </div>
       </div>
@@ -325,7 +329,7 @@
           <div class="col-md-4 ">
             <div class="blog-entry justify-content-end">
               <a href="{% url 'blog:postDetail' post.slug %}" class="block-20">
-                <img class="card-img-top" src="{{post.thumbnail.url}}" alt="">
+                <img class="card-img-top lazy" src="{{post.thumbnail.url}}" alt="">
               </a>
               <div class="text mt-3 float-left ">
                 <div class="d-flex align-items-center mb-3 ">
@@ -344,8 +348,8 @@
       </div>
       <div class="col-12 pb-4 mt-4 pt-4 text-center">
 
-        <button type="button" class="btn btn-outline-dark"> Read All</button>
-              </div>
+        <button type="button" class="btn btn-outline-dark"> {% trans 'Read All' %}</button>
+      </div>
     </div>
 
   </div>
@@ -359,7 +363,7 @@
         </div>
       </div>
       <div class="col-md-12 mb-4 pb-4">
-        
+
         <form>
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -379,7 +383,7 @@
             <label for="inputAddress2">{% trans 'Subject' %}</label>
             <input type="text" class="form-control eform" id="inputAddress2" placeholder="I want to hire you">
           </div>
-          
+
           <div class="form-group">
             <label for="exampleFormControlTextarea1">{% trans 'Message' %}</label>
             <textarea class="form-control eform" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -390,7 +394,7 @@
 
 
 
-    
+
       </div>
 
     </div>
@@ -401,5 +405,11 @@
 {% endblock body %}
 {% block extrajsimport %}
 <script src={% static "js/main.js" %}></script>
-
+<script src={% static "js/lang.js" %}></script>
+<script>
+  var myLazyLoad = new LazyLoad();
+  // After your content has changed...
+  myLazyLoad.update();
+  
+</script>
 {% endblock extrajsimport %}

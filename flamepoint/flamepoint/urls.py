@@ -25,6 +25,7 @@ urlpatterns = [
     path('blog/', include(('blog.urls', 'blog'), namespace='blog')),
     path('portfolio/', include(('portfolio.urls', 'portfolio'), namespace='portfolio')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
 ]
 
 if settings.DEBUG:
