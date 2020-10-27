@@ -26,6 +26,7 @@ gunicorn = "*"
 psycopg2-binary = "*"
 django-environ = "*"
 django-modeltranslation = "*"
+django-split-settings = "*"
 
 [requires]
 python_version = "3.8"

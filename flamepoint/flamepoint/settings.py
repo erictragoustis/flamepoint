@@ -155,6 +155,12 @@ CRISPY_TEMPLATE_PACK = 'uni_form'
     ##  CKEDITOR CONFIGURATION ##
 ####################################
 
+MAIN_PROFILE_ID = 1
+
+####################################
+    ##  CKEDITOR CONFIGURATION ##
+####################################
+
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'

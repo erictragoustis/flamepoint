@@ -5,36 +5,46 @@
 {% include "homenav.html" %}
 
 
-<section class="fpoint-section hpcard jumbotron" id="home-section" style="background-image: url('{% static 'img/codebg.jpg' %}')">
+<section class="fpoint-section hpcard jumbotron" id="home-section"
+  style="background-image: url('{% static 'img/codebg.jpg' %}')">
   <div class="overlay"></div>
   <div class="inner">
     <div class="container">
       <div class="row d-flex">
         <div class="col-md-6 col-lg-5 ">
-          <img src="{% static 'css/img/eric.jpg' %}" alt="eric"
+          <img src="{{profile.main_image.url}}" alt="eric"
             class="rounded-circle img-thumbnail img-fluid mx-auto d-block" />
 
-          <div class="row mt-4 mb-4 	justify-content-center ">
+          <div class="row mt-4 mb-4 text-center	justify-content-center ">
             <div class="col-2">
-              <i class="fab fa-github icon-4x fa-2x"></i>
+              <a class="pro-link" href="{{profile.github}}">
+              <i class="fab fa-github icon-4x fa-fw"></i>
+            </a>
             </div>
             <div class="col-2">
-              <i class="fab fa-twitter icon-4x fa-2x"></i>
+              <a class="pro-link" href="{{profile.twitter}}">
+              <i class="fab fa-twitter icon-4x fa-fw"></i>
+            </a>
             </div>
             <div class="col-2">
-              <i class="fab fa-instagram icon-4x fa-2x"></i>
+              <a class="pro-link" href="{{profile.instagram}}">
+              <i class="fab fa-instagram icon-4x fa-fw"></i>
+            </a>
             </div>
             <div class="col-2">
-              <i class="fab fa-facebook-messenger fa-2x "></i>
+              <a class="pro-link btn btn-sm" href="{{profile.messeneger}}">
+              <i class="fab fa-facebook-messenger fa-fw "></i>
+            </a>
             </div>
+            dfsgsdf
           </div>
         </div>
 
         <div class="col-md-6 col-lg-7 pl-lg-5 ">
           <div class="row  ">
             <div class="col-md-12 heading-section ">
-              <h1 class="big"><span class="bigfirst">Eric</span> Tragoustis</h1>
-              <h2 class="expertise">Web Developer / Digital Marketer</h2>
+              <h1 class="big"><span class="bigfirst">{{profile.name}}</span> {{profile.surname}}</h1>
+              <h2 class="expertise">{{profile.worktitle}}</h2>
               <div class="row">
                 <div class="col-md-2 mb-4">
                   <hr class="solid">
@@ -45,29 +55,19 @@
 
               <div class="row mt-2">
                 <div class="col-md-12">
-
-                  <p>Όλα άρχισαν στην ηλικία των 11 όταν ήρθα σε επαφή με τον πρώτο Η/Υ που ήρθε στο σπίτι έναν
-                    <strong><span class="emphasis">AMSTRAD
-                        CPC6128</span></strong> (υπάρχει και λειτουργεί ακόμα!) και άρχισα να αντιγράφω Mini games σε
-                    BASIC που
-                    είχε στο
-                    manual
-                    του. Η συνέχεια ήταν αναπόφευκτη, την εποχή του Γυμνασίου-Λυκείου, άρχισα να μαθαίνω από βιβλία
-                    PASCAL,
-                    FORTRAN και C, C++. Στη συνέχεια είδα την επαγγελματική ευκαιρία και μπήκα στον κόσμο του Web
-                    Development
-                    μαθαίνοντας <strong>PHP και HTML/CSS </strong>ώστε να μπορώ να καλύψω αυτή την ανάγκη.</p>
+                  {{profile.catchphrase|safe}}
+                  
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-md-3">
+          <div class="row mt-md-3 mb-4">
             <div class="col-md-6 ">
 
             </div>
-            <div class="col-md-6 ">
-              <a href="#" class="btn btn-block btn-primary py-3 px-3 mt-4">Download CV</a>
+            <div class="col-md-6 mb-4">
+              <a href="{{profile.cv.url}}" class="btn btn-block btn-primary py-3 px-3 mt-4 mb-4 ">{% trans 'Download CV'%}</a>
             </div>
           </div>
 
@@ -85,6 +85,11 @@
       <div class="col-md-12 mb-2">
         <div class="top-title">
           <h2 class="sectiontitle">My Skills</h2>
+          <div class="d-flex justify-content-center skill-typer">    
+            <span class="typer" id="main_typer" data-words="My favorite OS is Linux,I like to code in VS Code,I &hearts; cats" data-colors="#7FB347,#D25252,#569CD6" data-delay="100" data-deleteDelay="1000"></span>
+            <span class="cursor" data-owner="main_typer"></span>
+      
+        </div>
         </div>
         <div class="col-md-12 mb-2">
 
@@ -138,6 +143,7 @@
 
 
         </div>
+
 
       </div>
     </div>
@@ -236,7 +242,7 @@
             </div>
             <div class="timeline-content">
               <h5 class="title">{{work_exp.title}}</h5>
-              <h6 class="title">{{work_exp.duties}}</h5>
+              <h6 class="title green">{{work_exp.duties}}</h5>
                 <p class="description">
                 <div class="row">
                   <div class="col-md-12">
@@ -244,13 +250,12 @@
                   </div>
                   <div class="col-12">
                     <ul class="work fa-ul">
-                      <li class=""><span class="fa-li"><i class="fa fa-check" aria-hidden="true"></i></span>Δημιουργία
-                        και αξιολόγηση καμπανιών σε Facebook και Instagram</li>
-                      <li class=""><span class="fa-li"><i class="fa fa-check" aria-hidden="true"></i></span>Καθημερινή
-                        παρουσία στα Social Media</li>
-                      <li class=""><span class="fa-li"><i class="fa fa-check" aria-hidden="true"></i></span>Content
-                        Creation για τα posts στα Social Media (Copywriting / Images /Videos)</li>
-
+                      {% if work_exp.responsibilities_set.all %}
+                      {% for item in work_exp.responsibilities_set.all %}
+                      <li class=""><span class="fa-li"><i class="fa fa-check" aria-hidden="true"></i></span> {{item}}
+                      </li>
+                      {%endfor%}
+                      {% endif %}
                     </ul>
                   </div>
 
@@ -283,31 +288,14 @@
           <h2 class="sectiontitle" lang="el">{% trans 'My Story' %}</h2>
         </div>
       </div>
-      <div class="col-md-6">
-        <h3>Title</h3>
-        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
-          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
-          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
-          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
-          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
-          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
-          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
+      <div class="col-md-12">
+
+        {{profile.story|safe}}
+
         </p>
 
       </div>
-      <div class="col-md-6">
-        <h3>Title</h3>
-        <p>Nam vehicula consequat leo, in sodales purus ultricies vel. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos. Nam sed velit faucibus, lobortis lorem in, lobortis magna. Sed
-          quis dapibus nibh, sit amet fermentum metus. Aliquam tincidunt venenatis sapien in malesuada. Mauris porttitor
-          viverra lectus eu malesuada. Duis vulputate condimentum purus, vitae finibus libero aliquet a. Aenean a est at
-          neque auctor viverra. Vestibulum suscipit ex quis leo ultrices tincidunt. Nunc dapibus, enim vitae posuere
-          dictum, ante ante suscipit mauris, at bibendum quam turpis vitae magna. Nunc vel dui ligula. Curabitur massa
-          magna, tincidunt sit amet feugiat in, dapibus sed libero. Aliquam congue mauris augue, in egestas erat
-          facilisis nec. Duis sagittis neque sed magna euismod hendrerit. Quisque pulvinar sit amet dui sed faucibus.
-        </p>
-      </div>
+ 
 
     </div>
   </div>
@@ -348,7 +336,7 @@
       </div>
       <div class="col-12 pb-4 mt-4 pt-4 text-center">
 
-        <button type="button" class="btn btn-outline-dark"> {% trans 'Read All' %}</button>
+        <a href="{% url 'blog:allPosts' %}" type="button" class="btn btn-outline-dark"> {% trans 'Read All' %}</a>
       </div>
     </div>
 
@@ -406,10 +394,11 @@
 {% block extrajsimport %}
 <script src={% static "js/main.js" %}></script>
 <script src={% static "js/lang.js" %}></script>
+<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
 <script>
   var myLazyLoad = new LazyLoad();
   // After your content has changed...
   myLazyLoad.update();
-  
+
 </script>
 {% endblock extrajsimport %}

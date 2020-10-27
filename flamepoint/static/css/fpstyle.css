@@ -14,6 +14,13 @@ body {
   color: #D4D4D4;
 }
 
+.green{
+  color:#7FB347;
+}
+
+.pro-link{
+  display: block;
+}
 .jumbotron {
   color: white;
   position: relative;
@@ -22,6 +29,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 0;
+  background-color: #1e1e1e;
 }
 
 .jumbotron>.overlay {
@@ -32,6 +40,17 @@ body {
   left: 0;
   background-color: rgba(29, 29, 29, 0.9);
   z-index: 1;
+}
+
+.jumbotron>.overlay-blog {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(29, 29, 29, 0.7);
+  z-index: 1;
+  border-bottom: 1px solid #569CD6;
 }
 
 .jumbotron>.inner {
@@ -288,7 +307,11 @@ footer {
   min-height: 600px;
   background-color: #111111;
 }
+.skill-typer{
+  margin-top:-10px;
 
+}
+.typer{color: #fff}
 svg {
   position: absolute;
   bottom: -50px;

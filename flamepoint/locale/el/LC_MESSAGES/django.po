@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-27 11:32+0200\n"
-"PO-Revision-Date: 2020-10-27 11:33+0200\n"
+"POT-Creation-Date: 2020-10-27 15:23+0200\n"
+"PO-Revision-Date: 2020-10-27 15:24+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: el\n"
@@ -25,9 +25,13 @@ msgstr "Αγγλικά"
 msgid "Greek"
 msgstr "Ελληνικά"
 
-#: templates/blog/blog_detail.html:40
+#: templates/blog/blog_detail.html:40 templates/blog/blog_list.html:59
 msgid "Categories"
 msgstr "Κατηγορίες"
+
+#: templates/blog/blog_list.html:14 templates/homenav.html:17
+msgid "Blog"
+msgstr ""
 
 #: templates/homenav.html:12
 msgid "Home"
@@ -41,63 +45,63 @@ msgstr "Δεξιότητες"
 msgid "Portfolio"
 msgstr ""
 
-#: templates/homenav.html:15 templates/pages/home.html:214
+#: templates/homenav.html:15 templates/pages/home.html:211
 msgid "Experience"
 msgstr "Εμπειρία"
 
-#: templates/homenav.html:16 templates/pages/home.html:283
+#: templates/homenav.html:16 templates/pages/home.html:279
 msgid "My Story"
 msgstr "Η Ιστορία Μου"
 
-#: templates/homenav.html:17
-msgid "Blog"
-msgstr ""
-
 #: templates/homenav.html:18
-msgid "Contact/Hire"
+msgid "Contact"
 msgstr "Επικοινωνία"
 
-#: templates/pages/home.html:166
+#: templates/pages/home.html:61
+msgid "Download CV"
+msgstr "Κατέβασε το CV"
+
+#: templates/pages/home.html:163
 msgid "All"
 msgstr "Όλα"
 
-#: templates/pages/home.html:201
+#: templates/pages/home.html:198
 msgid "See All"
 msgstr "Όλα"
 
-#: templates/pages/home.html:323
+#: templates/pages/home.html:302
 msgid "Latest Posts"
 msgstr "Τελευταια Αρθρα"
 
-#: templates/pages/home.html:351
+#: templates/pages/home.html:330
 msgid "Read All"
 msgstr "Περισσότερα"
 
-#: templates/pages/home.html:362
+#: templates/pages/home.html:341
 msgid "Contact me"
 msgstr "Επικοινωνια"
 
-#: templates/pages/home.html:370
+#: templates/pages/home.html:349
 msgid "First Name"
 msgstr "Όνομα"
 
-#: templates/pages/home.html:374
+#: templates/pages/home.html:353
 msgid "Last Name"
 msgstr "Επίθετο"
 
-#: templates/pages/home.html:379
+#: templates/pages/home.html:358
 msgid "E-mail"
 msgstr ""
 
-#: templates/pages/home.html:383
+#: templates/pages/home.html:362
 msgid "Subject"
 msgstr "Θέμα"
 
-#: templates/pages/home.html:388
+#: templates/pages/home.html:367
 msgid "Message"
 msgstr "Μήνυμα"
 
-#: templates/pages/home.html:391
+#: templates/pages/home.html:370
 msgid "Send"
 msgstr "Αποστολή"
 
@@ -116,6 +120,9 @@ msgstr "Επίσκεψη Ιστότοπου"
 #: templates/portfolio/portfolio_detail.html:80
 msgid "Visit Profile"
 msgstr "Επίσκεψη Προφίλ"
+
+#~ msgid "Contact/Hire"
+#~ msgstr "Επικοινωνία"
 
 #~ msgid "my Story"
 #~ msgstr "Η Ιστορια Μου"
