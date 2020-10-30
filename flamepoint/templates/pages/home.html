@@ -12,8 +12,10 @@
     <div class="container">
       <div class="row d-flex">
         <div class="col-md-6 col-lg-5 ">
-          <img src="{{profile.main_image.url}}" alt="eric"
+          {% if profile.main_image %}
+          <img src="{{profile.main_image.url}}" alt="{{profile.name}} - {{profile.surname}}"
             class="rounded-circle img-thumbnail img-fluid mx-auto d-block" />
+            {% endif %}
 
           <div class="row mt-4 mb-4 text-center	justify-content-center ">
             <ul class="list-inline social-bar">
@@ -50,7 +52,6 @@
               <div class="row mt-2">
                 <div class="col-md-12">
                   {{profile.catchphrase|safe}}
-
                 </div>
               </div>
             </div>
