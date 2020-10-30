@@ -180,7 +180,8 @@ CKEDITOR_CONFIGS = {
 
 STATIC_URL = '/static/'
 if env('DEBUG'):
-    STATICFILES_DIRS = [
+        print ('a')
+        STATICFILES_DIRS = [
         os.path.join(BASE_DIR, 'static'),
     ]
 else:
