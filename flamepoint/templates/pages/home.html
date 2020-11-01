@@ -16,16 +16,16 @@
           {% endif %}
           <div class="row mt-4 mb-4 text-center	justify-content-center ">
             <ul class="list-inline social-bar">
-              <li class="list-inline-item mr-4"> <a class="pro-link" href="{{profile.github}}">
+              <li class="list-inline-item mr-4"> <a class="pro-link" target="_blank" href="{{profile.github}}">
                   <i class="fab fa-github icon-4x fa-2x"></i>
                 </a></li>
-              <li class="list-inline-item mr-4"><a class="pro-link" href="{{profile.twitter}}">
+              <li class="list-inline-item mr-4"><a class="pro-link" target="_blank" href="{{profile.twitter}}">
                   <i class="fab fa-twitter icon-4x fa-2x"></i>
                 </a></li>
-              <li class="list-inline-item mr-4"><a class="pro-link" href="{{profile.instagram}}">
+              <li class="list-inline-item mr-4"><a class="pro-link" target="_blank" href="{{profile.instagram}}">
                   <i class="fab fa-instagram icon-4x fa-2x"></i>
                 </a></li>
-              <li class="list-inline-item"><a class="pro-link " href="{{profile.messeneger}}">
+              <li class="list-inline-item"><a class="pro-link" target="_blank" href="{{profile.messenger}}">
                   <i class="fab fa-facebook-messenger fa-2x"></i>
                 </a></li>
             </ul>
@@ -139,7 +139,14 @@
             {% for item in portfolio %}
             <div class="col-sm-6 col-12 col-md-6 col-lg-4 all {{item.category.slug}} mb-2">
               <div class="box item">
+                {% if item.thumbnail_front%}
+                <img class="lazy" src="{{item.thumbnail_front.url}}">
+                {%else%}
+            
                 <img class="lazy" src="{{item.thumbnail.url}}">
+                {%endif%}
+                
+                
                 <div class="box-content">
                   <div class="inner-content">
                     <h3 class="title">{{item.title}}</h3>
@@ -147,7 +154,7 @@
                     <ul class="icon">
                       <li><a href="{% url 'portfolio:portfolioDetail' item.slug %}"><i class="fa fa-search"></i></a>
                       </li>
-                      <li><a href="#"><i class="fa fa-link"></i></a></li>
+                     
                     </ul>
                   </div>
                 </div>
@@ -308,13 +315,13 @@
               <li class=" mr-4">
                 <a class="pro-link" href="{{profile.github}}"><span class="fa-li"><i class="fab fa-github"></i></span>
                   Github </a></li>
-              <li class="mr-4"><a class="pro-link" href="{{profile.twitter}}">
+              <li class="mr-4"><a class="pro-link" target="_blank" href="{{profile.twitter}}">
                   <span class="fa-li"><i class="fab fa-twitter "></i></span>Twitter
                 </a></li>
-              <li class=" mr-4"><a class="pro-link" href="{{profile.instagram}}">
+              <li class=" mr-4"><a class="pro-link" target="_blank" href="{{profile.instagram}}">
                   <span class="fa-li"><i class="fab fa-instagram "></i></span>Instagram
                 </a></li>
-              <li class=""><a class="pro-link " href="{{profile.messeneger}}">
+              <li class=""><a class="pro-link" target="_blank" href="{{profile.messenger}}">
                   <span class="fa-li"><i class="fab fa-facebook-messenger "></i></span>Facebook
                 </a></li>
             </ul>
