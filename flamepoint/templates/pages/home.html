@@ -75,7 +75,6 @@
               data-words="My favorite OS is Linux,I like to code in VS Code,I &hearts; cats"
               data-colors="#7FB347,#D25252,#569CD6" data-delay="100" data-deleteDelay="1000"></span>
             <span class="cursor" data-owner="main_typer"></span>
-
           </div>
         </div>
         <div class="col-md-12 mb-2">
@@ -327,12 +326,11 @@
 </section>
 {% endblock body %}
 {% block extrajsimport %}
-<script src={% static "js/main.js" %}></script>
-<script src={% static "js/lang.js" %}></script>
-<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
-<script>
-  var myLazyLoad = new LazyLoad();
-  // After your content has changed...
-  myLazyLoad.update();
-</script>
+  <script src={% static "js/main.js" %}></script>
+  <script src={% static "js/lang.js" %}></script>
+  <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+  <script>
+    var myLazyLoad = new LazyLoad();
+    myLazyLoad.update();
+  </script>
 {% endblock extrajsimport %}
