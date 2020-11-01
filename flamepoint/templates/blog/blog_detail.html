@@ -3,7 +3,6 @@
 {%load i18n%}
 {% block body %}
 {% include "nav.html" %}
-
 <section>
     <div class="jumbotron jumbotron-fluid" style="background-image: url('{{post.feat_image.url}}');">
         <div class="overlay-blog"></div>
@@ -27,8 +26,6 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-
-
             </div>
         </div>
         <div class="row pt-4">
@@ -37,21 +34,17 @@
             </div>
             <div class="col-md-3">
                 <div class="sidebar-box ftco-animate fadeInUp ftco-animated">
-                    <h3 class="heading-sidebar">{% trans 'Categories' %}</h3>
-          
+                    <h3 class="heading-sidebar">{% trans 'Categories' %}</h3>          
                   <ul class="categories">
                       {%for category in categories%}
                     <li><a href="{% url 'blog:postListCategory' category.slug %}">{{category.title}} <span>({{category.dcount}})</span></a></li>
-
                     {%endfor%}
                   </ul>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
-
 {% endblock body %}
 {% block extrajsimport %}
 <script src={% static "js/main.js" %}></script>

@@ -25,8 +25,7 @@
             {% for language in languages %}
                 <li>
                   <a href="{% url 'set_language' %}" data-language-code="{{ language.code }}">
-                    {% if language.code == LANGUAGE_CODE %}&#10003;{% else %}&nbsp;&nbsp;{% endif %}
-                
+                    {% if language.code == LANGUAGE_CODE %}&#10003;{% else %}&nbsp;&nbsp;{% endif %}                
                     {{ language.name_local }}
                   </a>
                 </li>
