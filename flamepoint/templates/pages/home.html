@@ -3,8 +3,6 @@
 {%load i18n%}
 {% block body %}
 {% include "homenav.html" %}
-
-
 <section class="fpoint-section hpcard jumbotron" id="home-section"
   style="background-image: url('{% static 'img/codebg.jpg' %}')">
   <div class="overlay"></div>
@@ -15,8 +13,7 @@
           {% if profile.main_image %}
           <img src="{{profile.main_image.url}}" alt="{{profile.name}} - {{profile.surname}}"
             class="rounded-circle img-thumbnail img-fluid mx-auto d-block" />
-            {% endif %}
-
+          {% endif %}
           <div class="row mt-4 mb-4 text-center	justify-content-center ">
             <ul class="list-inline social-bar">
               <li class="list-inline-item mr-4"> <a class="pro-link" href="{{profile.github}}">
@@ -32,10 +29,8 @@
                   <i class="fab fa-facebook-messenger fa-2x"></i>
                 </a></li>
             </ul>
-
           </div>
         </div>
-
         <div class="col-md-6 col-lg-7 pl-lg-5 ">
           <div class="row  ">
             <div class="col-md-12 heading-section ">
@@ -46,9 +41,6 @@
                   <hr class="solid">
                 </div>
               </div>
-
-
-
               <div class="row mt-2">
                 <div class="col-md-12">
                   {{profile.catchphrase|safe}}
@@ -56,17 +48,14 @@
               </div>
             </div>
           </div>
-
           <div class="row mt-md-3 mb-4">
             <div class="col-md-6 ">
-
             </div>
             <div class="col-md-6 mb-4">
-              <a href="{{profile.cv.url}}"
-                class="btn btn-block btn-outline-primary py-3 px-3 mt-4 mb-4 "><i class="fas fa-cloud-download-alt"></i> {% trans 'Download CV'%}</a>
+              <a href="{{profile.cv.url}}" class="btn btn-block btn-outline-primary py-3 px-3 mt-4 mb-4 "><i
+                  class="fas fa-cloud-download-alt"></i> {% trans 'Download CV'%}</a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -85,41 +74,31 @@
             <span class="typer" id="main_typer"
               data-words="My favorite OS is Linux,I like to code in VS Code,I &hearts; cats"
               data-colors="#7FB347,#D25252,#569CD6" data-delay="100" data-deleteDelay="1000"></span>
-            <span class="cursor" data-owner="main_typer" ></span>
+            <span class="cursor" data-owner="main_typer"></span>
 
           </div>
         </div>
         <div class="col-md-12 mb-2">
-
-
-
           <nav class="nav nav-pills justify-content-center" id="myTab" role="tablist">
             {% regroup skills by category.parent as skill_categories %}
             {% for skill_category in skill_categories %}
-
-
             <a class="nav-item nav-link {% if skill_category.grouper.sort == 2 %} active{% endif %}"
               id="{{skill_category.grouper.slug}}-tab" data-toggle="tab" href="#{{skill_category.grouper.slug}}"
               role="tab" aria-controls="{{skill_category.grouper.slug}}" aria-selected="true">
               <i class="{{skill_category.grouper.icon}}"></i> {{skill_category.grouper}}
             </a>
-
             {% endfor %}
           </nav>
-
           <div class="tab-content" id="myTabContent">
             {% for skill_category in skill_categories %}
             <div class="tab-pane fade  {% if skill_category.grouper.sort == 2 %}show active{% endif %}"
               id="{{skill_category.grouper.slug}}" role="tabpanel" aria-labelledby="{{skill_category.grouper.slug}}">
               <div class="row">
-
                 {% regroup skill_category.list by category as skillsa %}
                 {% for skill_subcategory in skillsa %}
-
                 <div class="col-md-4 mt-4">
                   <h3 class="skillgrouptitle">{{skill_subcategory.grouper}}</h3>
                   <hr class="solidblue mb-4">
-
                   {% for skill in skill_subcategory.list %}
                   <p class="skills-heading">{{ skill.title }}</p>
                   <div class="progress skills mb-2">
@@ -130,25 +109,15 @@
                   {% endfor %}
                 </div>
                 {% endfor %}
-
               </div>
             </div>
-
             {% endfor %}
           </div>
-
-
-
-
         </div>
-
-
       </div>
     </div>
   </div>
-
 </section>
-
 <section class="portfolio sectiona portfoliobg" id="portfolio-section">
   <div class="container">
     <div class="row pt-4 pb-4">
@@ -157,29 +126,19 @@
           <h2 class="sectiontitle">Portfolio</h2>
         </div>
       </div>
-
-
       <div class="col-md-12">
-
-
-
-
         <div class="filters">
           <ul>
-
             <li class="active" data-filter="*">{% trans 'All' %}</li>
             {% for categories in portfolio_categories %}
             <li data-filter=".{{categories.slug}}">{{categories.title}}</li>
-
             {%endfor%}
-
           </ul>
         </div>
-
         <div class="filters-content">
           <div class="row grid">
             {% for item in portfolio %}
-            <div class="col-sm-6 col-6 col-md-6 col-lg-4 all {{item.category.slug}} mb-2">
+            <div class="col-sm-6 col-12 col-md-6 col-lg-4 all {{item.category.slug}} mb-2">
               <div class="box item">
                 <img class="lazy" src="{{item.thumbnail.url}}">
                 <div class="box-content">
@@ -198,37 +157,26 @@
             {%endfor%}
           </div>
         </div>
-
       </div>
       <div class="col-12 pb-4 text-center">
-
         <button type="button" class="btn btn-outline-dark"> {% trans 'See All' %}</button>
       </div>
-
     </div>
   </div>
 </section>
-
-
 <section class="section-skills" id="experience-section">
   <div class="container">
     <div class="row">
       <div class="col-md-12 mt-4">
         <div class="top-title">
           <h2 class="sectiontitle experience-green" lang="el">{% trans 'Experience' %}</h2>
-
         </div>
       </div>
       <div class="col-md-12">
-
         <div class="main-timeline">
-
           <!-- start experience section-->
-
           {% for work_exp in work %}
-
           <div class="timeline">
-
             <div class="date-content">
               <div class="date-outer">
                 <span class="date">
@@ -256,29 +204,18 @@
                       {% endif %}
                     </ul>
                   </div>
-
                 </div>
                 </p>
             </div>
           </div>
           {%endfor%}
-
           <!-- end experience section-->
-
-
-
         </div>
-
       </div>
     </div>
   </div>
 </section>
-
-
-
-
 <section class="" id="story-section">
-
   <div class="container">
     <div class="row pt-4 pb-4">
       <div class="col-md-12 ">
@@ -287,22 +224,14 @@
         </div>
       </div>
       <div class="col-md-12">
-
         {{profile.story|safe}}
-
         </p>
-
       </div>
-
-
     </div>
   </div>
-
-
 </section>
 <section id="blog-section" class="section-skills">
   <div class="container">
-
     <div class="row">
       <div class="col-md-12 ">
         <div class="top-title">
@@ -333,14 +262,11 @@
         </div>
       </div>
       <div class="col-12 pb-4 mt-4 pt-4 text-center">
-
         <a href="{% url 'blog:allPosts' %}" type="button" class="btn btn-outline-dark"> {% trans 'Read All' %}</a>
       </div>
     </div>
-
   </div>
 </section>
-
 <section class="" id="contact-section">
   <div class="container">
     <div class="row mt-4">
@@ -371,7 +297,6 @@
                 <label for="inputAddress2">{% trans 'Subject' %}</label>
                 <input type="text" class="form-control eform" id="inputAddress2" placeholder="I want to hire you">
               </div>
-    
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">{% trans 'Message' %}</label>
                 <textarea class="form-control eform" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -381,34 +306,25 @@
           </div>
           <div class="col-md-4">
             <ul class="list-unstyled fa-ul social-bar">
-              <li class=" mr-4"> 
-                <a class="pro-link" href="{{profile.github}}"><span class="fa-li"><i class="fab fa-github"  ></i></span> Github </a></li>
-            <li class="mr-4"><a class="pro-link" href="{{profile.twitter}}">
-              <span class="fa-li"><i class="fab fa-twitter "></i></span>Twitter
-              </a></li>
-            <li class=" mr-4"><a class="pro-link" href="{{profile.instagram}}">
-              <span class="fa-li"><i class="fab fa-instagram "></i></span>Instagram
-              </a></li>
-            <li class=""><a class="pro-link " href="{{profile.messeneger}}">
-              <span class="fa-li"><i class="fab fa-facebook-messenger "></i></span>Facebook
-              </a></li>
-          </ul>
+              <li class=" mr-4">
+                <a class="pro-link" href="{{profile.github}}"><span class="fa-li"><i class="fab fa-github"></i></span>
+                  Github </a></li>
+              <li class="mr-4"><a class="pro-link" href="{{profile.twitter}}">
+                  <span class="fa-li"><i class="fab fa-twitter "></i></span>Twitter
+                </a></li>
+              <li class=" mr-4"><a class="pro-link" href="{{profile.instagram}}">
+                  <span class="fa-li"><i class="fab fa-instagram "></i></span>Instagram
+                </a></li>
+              <li class=""><a class="pro-link " href="{{profile.messeneger}}">
+                  <span class="fa-li"><i class="fab fa-facebook-messenger "></i></span>Facebook
+                </a></li>
+            </ul>
           </div>
         </div>
-
-        
-
-
-
-
-
       </div>
-
     </div>
-
   </div>
 </section>
-
 {% endblock body %}
 {% block extrajsimport %}
 <script src={% static "js/main.js" %}></script>
@@ -418,6 +334,5 @@
   var myLazyLoad = new LazyLoad();
   // After your content has changed...
   myLazyLoad.update();
-
 </script>
 {% endblock extrajsimport %}

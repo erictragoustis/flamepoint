@@ -3,7 +3,6 @@
 {% load i18n %}
 {% block body %}
 {% include "nav.html" %}
-
 <div class="jumbotron jumbotron-fluid" style="background-image: url('{% static 'img/portfolio.jpg' %}')">
     <div class="overlay"></div>
     <div class="inner">
@@ -18,7 +17,6 @@
                     <hr class="solid">
                 </div>
             </div>
-            
         </div>
     </div>
 </div>
@@ -26,9 +24,10 @@
     <div class="container pt-4">
         {%if portfolio.is_video %}
         <div class="video-container">
-            
-            <iframe src="https://www.youtube.com/embed/{{portfolio.video_id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+            <iframe src="https://www.youtube.com/embed/{{portfolio.video_id}}" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
         {%else%}
         {% if portfolio.url %}
         <div class="d-flex justify-content-center">
@@ -38,27 +37,21 @@
         </div>
         {%else%}
         <div class="d-flex justify-content-center">
-      
-                <img src="{{portfolio.feat_image.url}}" class="img-fluid">
-     
+            <img src="{{portfolio.feat_image.url}}" class="img-fluid">
         </div>
         {%endif%}
         {%endif%}
         {% if portfolio.technologies.all %}
         <div class="row mt-4 technologies">
             {%for tech in portfolio.technologies.all%}
-
             <div class="col-6 col-md-3 techno mt-4">
                 <div class=""><i class="{{tech.icon}} tech-icon"></i></div>
                 <div class="">{{tech.title}}</div>
-
             </div>
             {%endfor%}
         </div>
         {%endif%}
-
         <div class="row mt-4 mb-4">
-
             <div class="col-md-7  mt-2">
                 <h2>{{portfolio.title}}</h2>
                 {% if portfolio.description %}
@@ -67,7 +60,6 @@
             </div>
             <div class="col-md-5  mt-2">
                 <dl class="row">
-           
                     {% if portfolio.creation_date %}
                     <dt class="col-sm-5">{% translate 'Creation date' %}:</dt>
                     <dd class="col-sm-7">{{portfolio.creation_date|date:'Y'}}</dd>
@@ -75,29 +67,26 @@
                     {% if portfolio.url %}
                     <dt class="col-sm-5">URL:</dt>
                     <dd class="col-sm-7">{{portfolio.url}}
-
                     </dd>
                     {% endif %}
                     {% if portfolio.section %}
                     <dt class="col-sm-5">{% trans 'Sector' %}:</dt>
                     <dd class="col-sm-7">{{portfolio.section}}
-
                     </dd>
-                    {% endif %}   
+                    {% endif %}
                 </dl>
                 {% if portfolio.url %}
-                <a href="{{portfolio.url}}" target="_blank" class="btn btn-primary btn-block mt-4">{% trans 'Visit Website' %}</a>
+                <a href="{{portfolio.url}}" target="_blank"
+                    class="btn btn-primary btn-block mt-4">{% trans 'Visit Website' %}</a>
                 {% endif %}
-         
                 {% if portfolio.social_url %}
-                <a href="{{portfolio.social_url}}" target="_blank" class="btn btn-primary btn-block mt-4">{% trans 'Visit Profile' %}</a>
+                <a href="{{portfolio.social_url}}" target="_blank"
+                    class="btn btn-primary btn-block mt-4">{% trans 'Visit Profile' %}</a>
                 {% endif %}
             </div>
         </div>
-
     </div>
 </section>
-
 {% endblock body %}
 {% block extrajsimport %}
 <script src={% static "js/main.js" %}></script>

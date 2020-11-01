@@ -159,7 +159,7 @@ DATE_INPUT_FORMATS = ('%d-%m-%Y','%Y-%m-%d')
 CRISPY_TEMPLATE_PACK = 'uni_form'
 
 ####################################
-    ##  CKEDITOR CONFIGURATION ##
+    ##  SITE CONFIGURATION ##
 ####################################
 
 MAIN_PROFILE_ID = 1

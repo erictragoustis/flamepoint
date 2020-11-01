@@ -3,7 +3,6 @@
 {%load i18n%}
 {% block body %}
 {% include "nav.html" %}
-
 <section>
     <div class="jumbotron jumbotron-fluid" style="background-image: url('{% static 'img/blog.jpg' %}')">
         <div class="overlay-blog"></div>
@@ -25,8 +24,6 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-
-
             </div>
         </div>
         <div class="row pt-4">
@@ -51,8 +48,7 @@
                       </div>
                     </div>
                     {% endfor %}
-                  </div>
-     
+                  </div>     
             </div>
             <div class="col-lg-3">
                 <div class="sidebar-box ">
@@ -70,7 +66,6 @@
 
     </div>
 </section>
-
 {% endblock body %}
 {% block extrajsimport %}
 <script src={% static "js/main.js" %}></script>
