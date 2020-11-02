@@ -165,7 +165,7 @@ CRISPY_TEMPLATE_PACK = 'uni_form'
 ####################################
 
 OPTIMIZED_IMAGE_METHOD = 'tinypng'
-TINYPNG_KEY = 'S308kmH0DgQLv92b1C9xJH8hCGP9fcvC'
+TINYPNG_KEY = env('TINYPNG')
 
 ####################################
     ##  SITE CONFIGURATION ##
