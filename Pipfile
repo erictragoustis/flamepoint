@@ -27,6 +27,7 @@ psycopg2-binary = "*"
 django-environ = "*"
 django-modeltranslation = "*"
 django-split-settings = "*"
+django-image-optimizer = "*"
 
 [requires]
 python_version = "3.8"

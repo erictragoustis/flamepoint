@@ -6,6 +6,7 @@ from django.conf import settings
 from django.db import models
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
+from image_optimizer.fields import OptimizedImageField
 from ckeditor_uploader.fields import RichTextUploadingField
 
 # Category
@@ -27,7 +28,7 @@ class Post (TimeStampedModel):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     body = RichTextUploadingField()
     is_featured = models.BooleanField(default=False)
-    feat_image = models.ImageField(upload_to='blog/images/')
+    feat_image = OptimizedImageField(upload_to='blog/images')
     thumbnail = models.ImageField(upload_to='blog/images/')
     author = models.ForeignKey(settings.AUTH_USER_MODEL,null=True, blank=True,on_delete=models.CASCADE)
 

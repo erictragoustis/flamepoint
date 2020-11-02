@@ -6,6 +6,7 @@ from django.db import models
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
 from ckeditor_uploader.fields import RichTextUploadingField
+from image_optimizer.fields import OptimizedImageField
 
 # Category
 class Category (TimeStampedModel):
@@ -54,8 +55,8 @@ class Portfolio (TimeStampedModel):
     video_id = models.CharField(max_length=200,null=True, blank=True)
     url = models.URLField(max_length=200, null=True, blank=True)
     social_url = models.URLField(max_length=200, null=True, blank=True)
-    feat_image = models.ImageField(upload_to='portfolio/images/',null=True, blank=True)
-    front_image = models.ImageField(upload_to='portfolio/images/',null=True, blank=True)
+    feat_image = OptimizedImageField(upload_to='portfolio/images/',null=True, blank=True)
+    front_image = OptimizedImageField(upload_to='portfolio/images/',null=True, blank=True)
 
     thumbnail = ImageSpecField(source='feat_image',
                                     processors=[ResizeToFill(800, 533)],

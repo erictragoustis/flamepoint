@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'modeltranslation',
+    'image_optimizer',
     #Apps
     'users',
     'pages',
@@ -157,6 +158,14 @@ USE_L10N = True
 USE_TZ = True
 DATE_INPUT_FORMATS = ('%d-%m-%Y','%Y-%m-%d')
 CRISPY_TEMPLATE_PACK = 'uni_form'
+
+####################################
+    ##  IMAGE OPTIMIZATION ##
+    # https://github.com/agusmakmun/django-image-optimizer
+####################################
+
+OPTIMIZED_IMAGE_METHOD = 'tinypng'
+TINYPNG_KEY = 'S308kmH0DgQLv92b1C9xJH8hCGP9fcvC'
 
 ####################################
     ##  SITE CONFIGURATION ##
