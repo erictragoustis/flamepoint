@@ -14,8 +14,11 @@ var $grid = $(".grid").isotope({
   masonry: {
     columnWidth: ".all"
   }
-})
+});
 
+$(window).scroll(function(){
+	$grid.isotope( 'layout' );
+})
 
   var onePageClick = function() {
 

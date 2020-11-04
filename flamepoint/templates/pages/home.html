@@ -134,7 +134,7 @@
             {%endfor%}
           </ul>
         </div>
-        <div class="filters-content">
+        <div class="filters-content "><div class=""></div>
           <div class="row grid">
             {% for item in portfolio %}
             <div class="col-sm-6 col-12 col-md-6 col-lg-4 all {{item.category.slug}} mb-2">
@@ -336,6 +336,7 @@
   <script src={% static "js/main.js" %}></script>
   <script src={% static "js/lang.js" %}></script>
   <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+  <!-- <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script> -->
   <script>
     //Wow
     var myLazyLoad = new LazyLoad();
