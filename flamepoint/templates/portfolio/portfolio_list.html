@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{%load i18n%}
+{% block body %}
+{% include "nav.html" %}
+<section>
+  <div class="jumbotron jumbotron-fluid" style="background-image: url('{% static 'img/codebg.jpg' %}')">
+    <div class="overlay-blog"></div>
+    <div class="inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="display-4">{% trans 'Portfolio'%}</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <hr class="solid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="portfolio sectiona portfoliobg" id="portfolio-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+      </div>
+    </div>
+    <div class="row pt-4">
+      <div class="col-lg-12 ">
+  
+        <div class="row">
+          
+          <div class="col-md-12">
+            <div class="filters">
+              <ul>
+                <li class="active" data-filter="*">{% trans 'All' %}</li>
+                {% for categories in portfolio_categories %}
+                <li data-filter=".{{categories.slug}}">{{categories.title}}</li>
+                {%endfor%}
+              </ul>
+            </div>
+            <div class="filters-content "><div class=""></div>
+              <div class="row grid">
+                {% for item in object_list %}
+                <div class="col-sm-6 col-12 col-md-6 col-lg-4 all {{item.category.slug}} mb-2">
+                  <div class="box item">
+                    {% if item.thumbnail_front%}
+                    <img class="lazy" src="{{item.thumbnail_front.url}}">
+                    {%else%}
+                
+                    <img class="lazy" src="{{item.thumbnail.url}}">
+                    {%endif%}
+                    
+                    
+                    <div class="box-content">
+                      <div class="inner-content">
+                        <h3 class="title">{{item.title}}</h3>
+                        <span class="post">{{item.category}}</span>
+                        <ul class="icon">
+                          <li><a href="{% url 'portfolio:portfolioDetail' item.slug %}"><i class="fa fa-search"></i></a>
+                          </li>
+                         
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {%endfor%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+
+    </div>
+
+  </div>
+</section>
+{% endblock body %}
+{% block extrajsimport %}
+<script src={% static "js/main.js" %}></script>
+<script src={% static "js/lang.js" %}></script>
+{% endblock extrajsimport %}

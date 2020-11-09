@@ -165,7 +165,9 @@
         </div>
       </div>
       <div class="col-12 pb-4 text-center">
-        <button type="button" class="btn btn-outline-dark"> {% trans 'See All' %}</button>
+
+        <a href="{% url 'portfolio:allPortfolios' %}" type="button" class="btn btn-outline-dark"> {% trans 'See All' %}</a>
+
       </div>
     </div>
   </div>
@@ -236,6 +238,7 @@
     </div>
   </div>
 </section>
+{% if posts %}
 <section id="blog-section" class="section-skills">
   <div class="container">
     <div class="row">
@@ -273,6 +276,7 @@
     </div>
   </div>
 </section>
+{%endif%}
 <section class="" id="contact-section">
   <div class="container">
     <div class="row mt-4">

@@ -14,7 +14,9 @@
         <li class="nav-item"><a href="#portfolio-section" class="nav-link"><span>{% trans 'Portfolio' %}</span></a></li>
         <li class="nav-item"><a href="#experience-section" class="nav-link"><span>{% trans 'Experience' %}</span></a></li>
         <li class="nav-item"><a href="#story-section" class="nav-link"><span>{% trans 'My Story' %}</span></a></li>
+        {%if posts %}
         <li class="nav-item"><a href="#blog-section" class="nav-link"><span>{% trans 'Blog' %}</span></a></li>
+        {%endif%}
         <li class="nav-item"><a href="#contact-section" class="nav-link"><span>{% trans 'Contact' %}</span></a></li>  
         {% get_current_language as LANGUAGE_CODE %}
         {% get_available_languages as LANGUAGES %}

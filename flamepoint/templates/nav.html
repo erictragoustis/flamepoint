@@ -11,10 +11,10 @@
       <ul class="navbar-nav nav ml-auto">
         <li class="nav-item"><a href="{% url 'pages:homepage' %}#home-section" class="nav-link "><span>Home</span></a></li>
         <li class="nav-item"><a href="{% url 'pages:homepage' %}#skills-section" class="nav-link"><span>Skills</span></a></li>
-        <li class="nav-item"><a href="{% url 'pages:homepage' %}#portfolio-section" class="nav-link"><span>Portfolio</span></a></li>
+        <li class="nav-item"><a href="{% url 'portfolio:allPortfolios' %}" class="nav-link"><span>Portfolio</span></a></li>
         <li class="nav-item"><a href="{% url 'pages:homepage' %}#experience-section" class="nav-link"><span>Experience</span></a></li>
         <li class="nav-item"><a href="{% url 'pages:homepage' %}#story-section" class="nav-link"><span>My Story</span></a></li>
-        <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
+        <!-- <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li> -->
         <li class="nav-item"><a href="{% url 'pages:homepage' %}#contact-section" class="nav-link"><span>Contact/Hire</span></a></li>
         {% get_current_language as LANGUAGE_CODE %}
         {% get_available_languages as LANGUAGES %}
