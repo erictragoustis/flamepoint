@@ -22,7 +22,7 @@ class HomePage(TemplateView):
         context["skills"] = skills.order_by('category__parent__sort','category__parent','category')
         context["work"] = work
         context["portfolio_categories"] = Category.objects.all()
-        context["portfolio"] = Portfolio.objects.order_by('-is_featured','-creation_date')[:6]
+        context["portfolio"] = Portfolio.objects.filter(is_featured=True).order_by('-creation_date')[:6]
         context["posts"] = posts.order_by('-created')[:3]
         context["profile"] = MainProfile.objects.get(pk=settings.MAIN_PROFILE_ID)
 

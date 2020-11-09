@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class PortfolioListView(ListView):
     model = Portfolio
     template_name = 'portfolio/portfolio_list.html'
-    ordering = ['-created']
+    ordering = ['-creation_date']
     
     
     def get_context_data(self, *args, **kwargs):
