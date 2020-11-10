@@ -604,6 +604,12 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   .fpoint-navbar-light .navbar-nav>.nav-item.active>a {
     color: #569CD6;
   }
+
+  .jumbotron {
+
+    padding-top: 4em;
+
+}
 }
 
 .fpoint-navbar-light .navbar-toggler {
