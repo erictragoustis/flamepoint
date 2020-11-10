@@ -45,6 +45,6 @@ def ajax_posting(request):
             send_mail(subject, message, to, ['eric@erictragoustis.com'], fail_silently=False)
         else:
             response = {
-                         'msg':'wrong' # response message
+                         'msg':'Please before sending the message enter correct data' # response message
             }
         return JsonResponse(response) 
